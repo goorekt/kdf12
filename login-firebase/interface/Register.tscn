@@ -90,6 +90,7 @@ text = "GO BACK"
 margin_top = 150.0
 margin_right = 180.0
 margin_bottom = 164.0
+autowrap = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
