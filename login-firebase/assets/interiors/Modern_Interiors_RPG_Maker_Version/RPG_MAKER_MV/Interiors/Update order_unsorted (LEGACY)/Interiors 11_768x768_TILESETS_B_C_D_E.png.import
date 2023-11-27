@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Interiors 11_768x768_TILESETS_B_C_D_E.png-8082f68641e82ece2d432e9bbfa64d01.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/interiors/Modern_Interiors_RPG_Maker_Version/RPG_MAKER_MV/Interiors/Update order_unsorted (LEGACY)/Interiors 11_768x768_TILESETS_B_C_D_E.png"
+dest_files=[ "res://.import/Interiors 11_768x768_TILESETS_B_C_D_E.png-8082f68641e82ece2d432e9bbfa64d01.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

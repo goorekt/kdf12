@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/6_Music_and_sport.png-1f3e944f3515ac4f87d74c531f4fc9a8.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/interiors/Modern_Interiors_RPG_Maker_Version/RPG_MAKER_XP/6_Music_and_sport.png"
+dest_files=[ "res://.import/6_Music_and_sport.png-1f3e944f3515ac4f87d74c531f4fc9a8.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
