@@ -7,3 +7,7 @@ func _on_RegisterButton_pressed():
 
 func _on_LoginButton_pressed():
 	get_tree().change_scene("res://interface/Login.tscn")
+
+
+func _on_quit_pressed():
+	get_tree().quit()
