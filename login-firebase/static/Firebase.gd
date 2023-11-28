@@ -47,6 +47,7 @@ func login(email: String, password: String, http: HTTPRequest) -> void:
 
 #Database system start
 func save_document(path: String, fields: Dictionary, http: HTTPRequest) -> void:
+	print("save document start")
 	var document := { "fields": fields }
 	var body := to_json(document)
 	var url := FIRESTORE_URL + path
