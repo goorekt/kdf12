@@ -29,7 +29,7 @@ margin_right = 56.584
 margin_bottom = -10.0
 
 [node name="LoginButton" type="Button" parent="VBoxContainer"]
-margin_right = 219.0
+margin_right = 117.0
 margin_bottom = 42.251
 size_flags_horizontal = 3
 theme = ExtResource( 5 )
@@ -37,7 +37,7 @@ text = "LOGIN"
 
 [node name="RegisterButton" type="Button" parent="VBoxContainer"]
 margin_top = 46.0
-margin_right = 219.0
+margin_right = 117.324
 margin_bottom = 88.251
 size_flags_horizontal = 3
 theme = ExtResource( 2 )
@@ -45,7 +45,7 @@ text = "REGISTER"
 
 [node name="quit" type="Button" parent="VBoxContainer"]
 margin_top = 92.0
-margin_right = 219.0
+margin_right = 117.0
 margin_bottom = 134.251
 size_flags_horizontal = 3
 theme = ExtResource( 3 )

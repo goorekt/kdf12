@@ -50,7 +50,7 @@ export var is_boy = true
 var start=false
 onready var boy=$Boy
 onready var girl=$Girl
-
+onready var atSchool = false
 export (int) var speed = 200
 
 
@@ -78,7 +78,6 @@ func get_input():
 			direction="up"
 			velocity.y -= 1
 			boy.play("Up")
-		print(velocity)
 		if (velocity.x==0 and velocity.y==0):
 			if (direction=="left"):
 				boy.play("IdleRight")
@@ -112,7 +111,6 @@ func get_input():
 			direction="up"
 			velocity.y -= 1
 			girl.play("Up")
-		print(velocity)
 		if (velocity.x==0 and velocity.y==0):
 			if (direction=="left"):
 				girl.play("IdleRight")
@@ -140,4 +138,25 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
+
+func transfer():
+	if !atSchool:
+		get_tree().change_scene("res://scn/school.tscn")
+		atSchool = true
+		
+	if atSchool:
+		get_tree().change_scene("res://scn/bedroom.tscn")
+		atSchool = false
+	print(atSchool)
+
+
+
+
+
+func _on_toSchool_area_entered(area: Area2D) -> void:
+	transfer()
 	
+
+
+func _on_toHome_area_entered(area: Area2D) -> void:
+	transfer()
