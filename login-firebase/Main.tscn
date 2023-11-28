@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://themes/kenneyUI-blue.tres" type="Theme" id=2]
 [ext_resource path="res://themes/kenneyUI-red.tres" type="Theme" id=3]
 [ext_resource path="res://assets/misc/b46dc06f1285263bd6c5d8aebc574e16.jpg" type="Texture" id=4]
 [ext_resource path="res://themes/kenneyUI-green.tres" type="Theme" id=5]
+[ext_resource path="res://scn/Test.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 529, 308 )
 scale = Vector2( 1.67204, 1.67204 )
 z_index = -1
@@ -48,6 +50,10 @@ margin_bottom = 134.251
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
 text = "quit"
+
+[node name="Test" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 543, 402 )
 
 [connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_LoginButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/RegisterButton" to="." method="_on_RegisterButton_pressed"]

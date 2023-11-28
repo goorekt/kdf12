@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/b46dc06f1285263bd6c5d8aebc574e16.jpg-0435f11ef95b4de71d57be3ee181b094.stex"
+path="res://.import/NPC3.png-d72e8569b0c812ac17da7df7feda1402.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/misc/b46dc06f1285263bd6c5d8aebc574e16.jpg"
-dest_files=[ "res://.import/b46dc06f1285263bd6c5d8aebc574e16.jpg-0435f11ef95b4de71d57be3ee181b094.stex" ]
+source_file="res://assets/characters/playable/Saved Characters/NPC3.png"
+dest_files=[ "res://.import/NPC3.png-d72e8569b0c812ac17da7df7feda1402.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
