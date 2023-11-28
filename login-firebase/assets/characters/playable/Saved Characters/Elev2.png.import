@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Room_Builder_3d_walls_48x48.png-df22c6e3db38e0af56ed696682f39041.stex"
+path="res://.import/Elev2.png-8d5add2741a003f8f4e0aad914e48080.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_3d_walls_48x48.png"
-dest_files=[ "res://.import/Room_Builder_3d_walls_48x48.png-df22c6e3db38e0af56ed696682f39041.stex" ]
+source_file="res://assets/characters/playable/Saved Characters/Elev2.png"
+dest_files=[ "res://.import/Elev2.png-8d5add2741a003f8f4e0aad914e48080.stex" ]
 
 [params]
 
