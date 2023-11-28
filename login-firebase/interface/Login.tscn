@@ -2,7 +2,7 @@
 
 [ext_resource path="res://interface/Login.gd" type="Script" id=1]
 [ext_resource path="res://themes/kenneyUI-green.tres" type="Theme" id=2]
-[ext_resource path="res://themes/kenneyUI-red.tres" type="Theme" id=3]
+[ext_resource path="res://themes/kenneyUI-yellow.tres" type="Theme" id=3]
 
 [node name="Login" type="Control"]
 anchor_right = 1.0
@@ -26,9 +26,8 @@ margin_right = 29.576
 margin_bottom = 124.0
 
 [node name="credentials" type="VBoxContainer" parent="Container"]
-anchor_bottom = 0.468
 margin_right = 251.0
-margin_bottom = 125.34
+margin_bottom = 126.0
 
 [node name="Username" type="VBoxContainer" parent="Container/credentials"]
 margin_right = 251.0
