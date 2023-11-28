@@ -18,7 +18,7 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 	var response_body := JSON.parse(body.get_string_from_ascii())
 	if response_code != 200:
 		notification.text = response_body.result.error.message.capitalize()
-		$Container/VBoxContainer/LoginButton.disabled = false
+		$Container/LoginButton.disabled = false
 	else:
 		notification.text = "Sign in sucessful!"
 		get_tree().change_scene("res://scn/database_test.tscn")
