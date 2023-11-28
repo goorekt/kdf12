@@ -53,7 +53,7 @@ func _on_ConfirmButton_pressed() -> void:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
 	information_sent = true
 
-
+#Bruges til at hente data fra databasen og ændre notes i godot
 func set_profile(value: Dictionary) -> void:
 	profile = value
 	nickname.text = profile.nickname.stringValue
