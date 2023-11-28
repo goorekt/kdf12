@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/UIpack_vector.svg-e6e16beb856b6efd5eb08fb327d42c94.stex"
+path="res://.import/b46dc06f1285263bd6c5d8aebc574e16.jpg-0435f11ef95b4de71d57be3ee181b094.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://themes/UIpack_vector.svg"
-dest_files=[ "res://.import/UIpack_vector.svg-e6e16beb856b6efd5eb08fb327d42c94.stex" ]
+source_file="res://assets/misc/b46dc06f1285263bd6c5d8aebc574e16.jpg"
+dest_files=[ "res://.import/b46dc06f1285263bd6c5d8aebc574e16.jpg-0435f11ef95b4de71d57be3ee181b094.stex" ]
 
 [params]
 

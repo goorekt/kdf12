@@ -1,34 +1,54 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://themes/kenneyUI-blue.tres" type="Theme" id=2]
+[ext_resource path="res://themes/kenneyUI-red.tres" type="Theme" id=3]
+[ext_resource path="res://assets/misc/b46dc06f1285263bd6c5d8aebc574e16.jpg" type="Texture" id=4]
+[ext_resource path="res://themes/kenneyUI-green.tres" type="Theme" id=5]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -233.5
-margin_top = -128.0
-margin_right = 233.5
-margin_bottom = 128.0
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 529, 308 )
+scale = Vector2( 1.67204, 1.67204 )
+z_index = -1
+texture = ExtResource( 4 )
 
-[node name="RegisterButton" type="Button" parent="HBoxContainer"]
-margin_right = 231.0
-margin_bottom = 256.0
-size_flags_horizontal = 3
-text = "REGISTER"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.4
+anchor_top = 0.376
+anchor_right = 0.559
+anchor_bottom = 1.0
+margin_top = -2.59999
+margin_right = 56.584
+margin_bottom = -10.0
 
-[node name="LoginButton" type="Button" parent="HBoxContainer"]
-margin_left = 235.0
-margin_right = 467.0
-margin_bottom = 256.0
+[node name="LoginButton" type="Button" parent="VBoxContainer"]
+margin_right = 219.0
+margin_bottom = 42.251
 size_flags_horizontal = 3
+theme = ExtResource( 5 )
 text = "LOGIN"
 
-[connection signal="pressed" from="HBoxContainer/RegisterButton" to="." method="_on_RegisterButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/LoginButton" to="." method="_on_LoginButton_pressed"]
+[node name="RegisterButton" type="Button" parent="VBoxContainer"]
+margin_top = 46.0
+margin_right = 219.0
+margin_bottom = 88.251
+size_flags_horizontal = 3
+theme = ExtResource( 2 )
+text = "REGISTER"
+
+[node name="quit" type="Button" parent="VBoxContainer"]
+margin_top = 92.0
+margin_right = 219.0
+margin_bottom = 134.251
+size_flags_horizontal = 3
+theme = ExtResource( 3 )
+text = "quit"
+
+[connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_LoginButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/RegisterButton" to="." method="_on_RegisterButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
