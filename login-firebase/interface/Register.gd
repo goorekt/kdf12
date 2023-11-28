@@ -1,9 +1,9 @@
 extends Control
 
 onready var http : HTTPRequest = $HTTPRequest
-onready var username : LineEdit = $Container/VBoxContainer/Username/LineEdit
-onready var password : LineEdit = $Container/VBoxContainer/Password/LineEdit
-onready var confirm : LineEdit = $Container/VBoxContainer/Confirm/LineEdit
+onready var email : LineEdit = $Container/VBoxContainer/email/LineEdit
+onready var password : LineEdit = $Container/VBoxContainer/password/LineEdit
+onready var confirm : LineEdit = $Container/VBoxContainer/confirm_password/LineEdit
 onready var notification : Label = $Container/Notification
 
 
@@ -18,10 +18,10 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 
 
 func _on_RegisterButton_pressed():
-	if password.text != confirm.text or username.text.empty() or password.text.empty():
-		notification.text = "Invalid password or username"
+	if password.text != confirm.text or email.text.empty() or password.text.empty():
+		notification.text = "Invalid password or email"
 		return
-	Firebase.register(username.text, password.text, http)
+	Firebase.register(email.text, password.text, http)
 
 
 

@@ -58,17 +58,17 @@ margin_top = 22.0
 margin_right = 272.0
 margin_bottom = 61.4343
 
-[node name="confirm pass" type="VBoxContainer" parent="Container/VBoxContainer"]
+[node name="confirm_password" type="VBoxContainer" parent="Container/VBoxContainer"]
 margin_top = 130.0
 margin_right = 272.0
 margin_bottom = 191.0
 
-[node name="Label" type="Label" parent="Container/VBoxContainer/confirm pass"]
+[node name="Label" type="Label" parent="Container/VBoxContainer/confirm_password"]
 margin_right = 272.0
 margin_bottom = 18.0
 text = "Confirm Password"
 
-[node name="LineEdit" type="LineEdit" parent="Container/VBoxContainer/confirm pass"]
+[node name="LineEdit" type="LineEdit" parent="Container/VBoxContainer/confirm_password"]
 margin_top = 22.0
 margin_right = 272.0
 margin_bottom = 61.4343
