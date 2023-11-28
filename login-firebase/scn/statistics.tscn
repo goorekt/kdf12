@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scripts/update_database.gd" type="Script" id=1]
+[ext_resource path="res://scripts/load_statistics.gd" type="Script" id=1]
 
 [node name="Statistics" type="Control"]
 anchor_right = 1.0
