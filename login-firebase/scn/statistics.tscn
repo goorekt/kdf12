@@ -73,3 +73,7 @@ margin_bottom = 14.0
 margin_top = 72.0
 margin_right = 482.0
 margin_bottom = 86.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

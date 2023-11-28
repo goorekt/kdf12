@@ -17,5 +17,13 @@ margin_bottom = 20.0
 margin_right = 40.0
 margin_bottom = 14.0
 
+[node name="go_to_statistics" type="Button" parent="."]
+margin_left = 76.0
+margin_top = 17.0
+margin_right = 88.0
+margin_bottom = 37.0
+text = "Go to statistics"
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="go_to_statistics" to="." method="_on_go_to_statistics_pressed"]

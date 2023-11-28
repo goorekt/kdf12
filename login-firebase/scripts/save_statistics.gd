@@ -36,7 +36,16 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 
 func _on_Button_pressed() -> void:
 	print("button pressed")
-	profile.grades = {"arrayValue": {"values": [1, 2, 3]}} # Erstat med variabel der holder værdien
+	profile.grades = {
+		"mapValue": {
+			"fields": {
+				"0": {"integerValue": 1},
+				"1": {"integerValue": 2},
+				"2": {"integerValue": 3}
+			}
+		}
+	}
+	#profile.grades = { "integerValue": 1 }
 	profile.tests = { "integerValue": 1 } # Erstat med variabel der holder værdien
 	profile.time = { "integerValue": 10 } # Erstat med variabel der holder værdien
 	match new_profile:
@@ -48,3 +57,7 @@ func _on_Button_pressed() -> void:
 			print("document updated")
 	information_sent = true
 	print("information sent")
+
+
+func _on_go_to_statistics_pressed():
+	get_tree().change_scene("res://scn/statistics.tscn")
