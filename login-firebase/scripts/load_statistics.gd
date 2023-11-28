@@ -35,6 +35,6 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 #Bruges til at hente data fra databasen og ændre notes i godot
 func set_profile(value: Dictionary) -> void:
 	profile = value
-	grades.text = profile.grades.arrayValue
+	grades.text = profile.grades.join(", ")
 	tests.text = profile.tests.intengerValue
 	time.text = profile.time.intengerValue

@@ -1,8 +1,8 @@
 extends Control
 
 onready var http : HTTPRequest = $HTTPRequest
-onready var username : LineEdit = $Container/VBoxContainer/Username/LineEdit
-onready var password : LineEdit = $Container/VBoxContainer/Password/LineEdit
+onready var username : LineEdit = $Container/credentials/Username/LineEdit
+onready var password : LineEdit = $Container/credentials/Password/LineEdit
 onready var notification : Label = $Container/Notification
 
 
@@ -11,7 +11,7 @@ func _on_LoginButton_pressed():
 		notification.text = "Please, enter your username and password"
 		return
 	Firebase.login(username.text, password.text, http)
-	$Container/VBoxContainer/LoginButton.disabled = true
+	$Container/LoginButton.disabled = true
 
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
@@ -21,6 +21,7 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		$Container/VBoxContainer/LoginButton.disabled = false
 	else:
 		notification.text = "Sign in sucessful!"
+		get_tree().change_scene("res://scn/database_test.tscn")
 		
 
 
