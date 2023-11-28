@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=2]
+[gd_scene load_steps=135 format=2]
 
 [ext_resource path="res://assets/characters/npc/elever/NPC6.png" type="Texture" id=1]
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_Floors_48x48.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/characters/npc/elever/NPC1.png" type="Texture" id=14]
 [ext_resource path="res://assets/characters/npc/elever/NPC2.png" type="Texture" id=15]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scn/school.gd" type="Script" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 144, 0, 144 )
@@ -1561,6 +1562,7 @@ extents = Vector2( 82.5625, 47.5 )
 extents = Vector2( 27.5, 46.5 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 17 )
 
 [node name="wall" type="TileMap" parent="."]
 tile_set = SubResource( 24 )
@@ -1595,7 +1597,7 @@ frames = SubResource( 30 )
 position = Vector2( 70, -488 )
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 3
+frame = 4
 speed_scale = 1.5
 playing = true
 
@@ -1606,6 +1608,7 @@ position = Vector2( 460, -383 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc1"
+frame = 5
 playing = true
 
 [node name="npc2" type="AnimatedSprite" parent="Node2D"]
@@ -1613,6 +1616,7 @@ position = Vector2( 604, -289 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc2"
+frame = 5
 playing = true
 
 [node name="npc3" type="AnimatedSprite" parent="Node2D"]
@@ -1620,7 +1624,6 @@ position = Vector2( 557, -448 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc3"
-frame = 7
 playing = true
 
 [node name="lærer1" type="AnimatedSprite" parent="Node2D"]
@@ -1628,7 +1631,7 @@ position = Vector2( 792, -225 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "lærer1"
-frame = 4
+frame = 3
 playing = true
 
 [node name="lærer2" type="AnimatedSprite" parent="Node2D"]
@@ -1636,7 +1639,7 @@ position = Vector2( 249, -621 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "lærer2-book"
-frame = 8
+frame = 1
 playing = true
 
 [node name="npc5" type="AnimatedSprite" parent="Node2D"]
@@ -1644,7 +1647,7 @@ position = Vector2( 121, -234 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc4"
-frame = 4
+frame = 3
 playing = true
 
 [node name="npc6" type="AnimatedSprite" parent="Node2D"]
@@ -1652,7 +1655,7 @@ position = Vector2( -22, -335 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc5"
-frame = 2
+frame = 1
 playing = true
 
 [node name="npc7" type="AnimatedSprite" parent="Node2D"]
@@ -1660,7 +1663,7 @@ position = Vector2( -24, -430 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc6"
-frame = 3
+frame = 2
 playing = true
 
 [node name="npc8" type="AnimatedSprite" parent="Node2D"]
@@ -1668,7 +1671,6 @@ position = Vector2( 168, -432 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc7"
-frame = 1
 playing = true
 
 [node name="chairs" type="TileMap" parent="."]
@@ -1677,8 +1679,6 @@ tile_set = SubResource( 98 )
 cell_size = Vector2( 48, 48 )
 format = 1
 tile_data = PoolIntArray( -524289, 536870912, 0, -589821, 536870912, 0, -393217, 536870912, 0, -327678, 536870912, 0 )
-
-[node name="Player" parent="." instance=ExtResource( 16 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 390, -241 )
@@ -1705,4 +1705,7 @@ shape = SubResource( 118 )
 position = Vector2( 240, -264.5 )
 shape = SubResource( 119 )
 
-[connection signal="area_entered" from="toHome" to="Player" method="_on_toHome_area_entered"]
+[node name="Player" parent="." instance=ExtResource( 16 )]
+position = Vector2( 258, 87 )
+
+[connection signal="body_entered" from="toHome" to="." method="_on_toHome_body_entered"]

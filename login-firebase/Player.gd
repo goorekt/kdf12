@@ -161,6 +161,7 @@ func get_input():
 
 
 func _ready():
+	add_to_group("player")
 	girl.set_speed_scale(1.5)
 	boy.set_speed_scale(1.5)
 	if is_boy:
@@ -173,26 +174,3 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 
-
-
-func transfer():
-	if !atSchool:
-		get_tree().change_scene("res://scn/school.tscn")
-		atSchool = true
-		
-	if atSchool:
-		get_tree().change_scene("res://scn/bedroom.tscn")
-		atSchool = false
-	print(atSchool)
-
-
-
-
-
-func _on_toSchool_area_entered(area: Area2D) -> void:
-	transfer()
-	
-
-
-func _on_toHome_area_entered(area: Area2D) -> void:
-	transfer()
