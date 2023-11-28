@@ -61,23 +61,29 @@ func get_input():
 	if is_boy:
 		velocity = Vector2()
 		if Input.is_action_pressed('right'):
-			direction="right"
 			velocity.x += 1
-			boy.play("Right") 
 			boy.set_flip_h(false)
 		if Input.is_action_pressed('left'):
-			direction="left"
 			velocity.x -= 1
 			boy.set_flip_h(true)
-			boy.play("Right")
 		if Input.is_action_pressed('down'):
-			direction="down"
 			velocity.y += 1
-			boy.play ("Down")
+	
 		if Input.is_action_pressed('up'):
-			direction="up"
 			velocity.y -= 1
-			boy.play("Up")
+		
+		
+		if Input.is_action_pressed("right"):
+			direction="right"
+		elif Input.is_action_pressed("left"):
+			direction="left"
+		elif Input.is_action_pressed("up"):
+			direction="up"
+		elif Input.is_action_pressed("down"):
+			direction="down"
+		
+		
+		
 		if (velocity.x==0 and velocity.y==0):
 			if (direction=="left"):
 				boy.play("IdleRight")
@@ -89,28 +95,44 @@ func get_input():
 				boy.play("IdleUp")
 			elif (direction == "down"):
 				boy.play("IdleDown")
-			
-	
+		else:
+			if (direction=="left"):
+				boy.play("Right")
+				boy.set_flip_h(true)
+			elif (direction == "right"):
+				boy.play("Right")
+				boy.set_flip_h(false)
+			elif (direction == "up"):
+				boy.play("Up")
+			elif (direction == "down"):
+				boy.play("Down")
 	else:
 		velocity = Vector2()
 		if Input.is_action_pressed('right'):
-			direction="right"
 			velocity.x += 1
-			girl.play("Right") 
 			girl.set_flip_h(false)
+			
 		if Input.is_action_pressed('left'):
-			direction="left"
 			velocity.x -= 1
 			girl.set_flip_h(true)
-			girl.play("Right")
 		if Input.is_action_pressed('down'):
-			direction="down"
+
 			velocity.y += 1
-			girl.play ("Down")
+
 		if Input.is_action_pressed('up'):
-			direction="up"
+
 			velocity.y -= 1
-			girl.play("Up")
+
+		
+		if Input.is_action_pressed("right"):
+			direction="right"
+		elif Input.is_action_pressed("left"):
+			direction="left"
+		elif Input.is_action_pressed("up"):
+			direction="up"
+		elif Input.is_action_pressed("down"):
+			direction="down"
+			
 		if (velocity.x==0 and velocity.y==0):
 			if (direction=="left"):
 				girl.play("IdleRight")
@@ -122,21 +144,35 @@ func get_input():
 				girl.play("IdleUp")
 			elif (direction == "down"):
 				girl.play("IdleDown")
+		else:
+			if (direction=="left"):
+				girl.play("Right")
+				girl.set_flip_h(true)
+			elif (direction == "right"):
+				girl.play("Right")
+				girl.set_flip_h(false)
+			elif (direction == "up"):
+				girl.play("Up")
+			elif (direction == "down"):
+				girl.play("Down")
 			
 	
 	velocity = velocity.normalized() * speed
 
 
 func _ready():
+	girl.set_speed_scale(1.5)
+	boy.set_speed_scale(1.5)
 	if is_boy:
 		boy.show()
 		girl.hide()
 	else:
-		girl.hide()
-		boy.show()
+		girl.show()
+		boy.hide()
 func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
+
 
 
 func transfer():
