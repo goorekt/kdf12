@@ -1,7 +1,7 @@
 extends Control
 
 onready var http : HTTPRequest = $HTTPRequest
-onready var notification : Label = $Container/Notification
+onready var notification : Label = $Notification
 
 
 var new_profile := false
@@ -15,6 +15,7 @@ var profile := {
 
 func _ready() -> void:
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
+	print("firebase.get_document done")
 
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
@@ -23,21 +24,27 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		404:
 			notification.text = "Please, enter your information"
 			new_profile = true
+			print("404")
 			return
 		200:
 			if information_sent:
 				notification.text = "Information saved successfully"
 				information_sent = false
+				print("information sent")
 			self.profile = result_body.fields
 
 
-func _on_ConfirmButton_pressed() -> void:
-	profile.grades = {"arrayValue": {"values": null}} # Erstat med variabel der holder værdien
-	profile.tests = { "integerValue": null } # Erstat med variabel der holder værdien
-	profile.time = { "integerValue": null } # Erstat med variabel der holder værdien
+func _on_Button_pressed() -> void:
+	print("button pressed")
+	profile.grades = {"arrayValue": {"values": [1, 2, 3]}} # Erstat med variabel der holder værdien
+	profile.tests = { "integerValue": 1 } # Erstat med variabel der holder værdien
+	profile.time = { "integerValue": 10 } # Erstat med variabel der holder værdien
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
+			print("document saved")
 		false:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
+			print("document updated")
 	information_sent = true
+	print("information sent")
