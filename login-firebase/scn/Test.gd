@@ -134,6 +134,8 @@ onready var time_label=$Paper/timerlabel
 onready var http : HTTPRequest = $HTTPRequest
 var timer=0
 
+signal test_over
+
 var karaktere=[-3,0,2,4,7,10,12]
 
 
@@ -146,8 +148,11 @@ var profile := {
 }
 
 func _ready():
+	hide()
+	position.x=get_tree().get_nodes_in_group("testpos")[0].position.x
+	position.y=get_tree().get_nodes_in_group("testpos")[0].position.y
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
-	AutoloadData.taking_test=true
+
 	page_change()
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
@@ -186,6 +191,8 @@ func update_question():
 
 
 func evaluate():
+	emit_signal("test_over")
+	hide()
 	print("*evaluate start")
 	var score=0
 	for i in range(7):
@@ -212,7 +219,7 @@ func evaluate():
 	print("information sent")
 	
 	yield(get_tree().create_timer(2), "timeout")
-	queue_free()
+	
 
 func _process(delta):
 	timer+=delta

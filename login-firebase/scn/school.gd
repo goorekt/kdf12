@@ -8,7 +8,7 @@ var test_scene=preload("res://scn/Test.tscn")
 onready var test_position=$testPos
 
 func _ready():
-	pass # Replace with function body.
+	$karakterblad.hide()
 
 
 func _process(delta):
@@ -22,7 +22,16 @@ func _on_toHome_body_entered(body):
 
 
 func _on_takeTest_body_entered(body):
-	$testArrow.hide()
+
+	
 	if body.is_in_group("player"):
-		var test=test_scene.instance()
-		test_position.add_child(test)
+		$testArrow.hide()
+		AutoloadData.taking_test=true
+		$Test.show()
+
+
+func _on_Test_test_over():
+	var score_display=""
+	if (AutoloadData.current_score==0 or AutoloadData.current_score==2):
+		score_display="0"
+	$karakterblad/Label.text=score_display+str(AutoloadData.current_score)
