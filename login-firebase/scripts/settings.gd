@@ -3,8 +3,10 @@ extends Control
 onready var http : HTTPRequest = $HTTPRequest
 onready var username : LineEdit = $Container/VBoxContainer/Name/Label2
 onready var age : LineEdit = $Container/VBoxContainer/Age/Label2
-onready var character : LineEdit = $Container/VBoxContainer/Character/Label2
+onready var character : OptionButton = $Container/VBoxContainer/Character/Label2
 onready var notification : Label = $Container/Notification
+onready var selection : OptionButton = $Container/VBoxContainer/Character/Label2
+
 
 var new_profile := false
 var information_sent := false
@@ -17,6 +19,8 @@ var profile := {
 func _ready() -> void:
 	print("load_statistic")
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
+	selection.add_item("Boy",1)
+	selection.add_item("Girl",2)
 
 #Tilføj HTTPRequest node til scenen og lav signal
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
@@ -40,7 +44,7 @@ func _on_Button_pressed() -> void:
 	print("button pressed")
 	profile.name = { "stringValue": username.text } # Erstat med variabel der holder værdien
 	profile.age = { "integerValue": age.text } # Erstat med variabel der holder værdien
-	profile.character = { "integerValue": character.text } # Erstat med variabel der holder værdien
+	profile.character = { "integerValue": character.get_selected_id() } # Erstat med variabel der holder værdien
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
