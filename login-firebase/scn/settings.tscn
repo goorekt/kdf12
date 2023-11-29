@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/settings.gd" type="Script" id=1]
 [ext_resource path="res://themes/kenvector_future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://themes/kenneyUI-green.tres" type="Theme" id=3]
+[ext_resource path="res://themes/kenneyUI-red.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -109,14 +111,14 @@ margin_bottom = 184.0
 
 [node name="Label" type="Label" parent="Container/VBoxContainer/Character"]
 margin_top = 5.0
-margin_right = 126.0
+margin_right = 212.0
 margin_bottom = 23.0
 custom_fonts/font = SubResource( 4 )
-text = "Character: "
+text = "Character Number: "
 
 [node name="Label2" type="LineEdit" parent="Container/VBoxContainer/Character"]
-margin_left = 130.0
-margin_right = 188.0
+margin_left = 216.0
+margin_right = 274.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 7 )
 expand_to_text_length = true
@@ -130,11 +132,23 @@ custom_fonts/font = SubResource( 8 )
 [node name="Button" type="Button" parent="Container"]
 margin_top = 478.0
 margin_right = 482.0
-margin_bottom = 502.0
+margin_bottom = 520.251
+rect_pivot_offset = Vector2( -1050, -230 )
+theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 9 )
 text = "SAVE"
+
+[node name="Button2" type="Button" parent="Container"]
+margin_top = 600.0
+margin_right = 482.0
+margin_bottom = 642.251
+rect_pivot_offset = Vector2( -1050, -230 )
+theme = ExtResource( 4 )
+custom_fonts/font = SubResource( 9 )
+text = "GO BACK"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [connection signal="pressed" from="Container/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Container/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

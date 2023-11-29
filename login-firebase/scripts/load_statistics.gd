@@ -52,3 +52,7 @@ func set_profile(value: Dictionary) -> void:
 	grades.text = str(grades_array)
 	tests.text = str(profile.tests.integerValue)
 	time.text = str(profile.time.integerValue)
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("")

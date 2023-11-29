@@ -61,3 +61,7 @@ func set_profile(value: Dictionary) -> void:
 	username.text = profile.name.stringValue
 	age.text = str(profile.age.integerValue)
 	character.text = str(profile.character.integerValue)
+
+
+func _on_Button2_pressed():
+	get_tree().change_scene("")
