@@ -162,6 +162,7 @@ func get_input():
 
 func _ready():
 	add_to_group("player")
+	is_boy=AutoloadData.is_boy
 	girl.set_speed_scale(1.5)
 	boy.set_speed_scale(1.5)
 	if is_boy:

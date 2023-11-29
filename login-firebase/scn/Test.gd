@@ -163,12 +163,11 @@ func evaluate():
 	for i in range(7):
 		if (answers[i]==exam[i].correct):
 			score+=1
-	print("Du fik karakteren")
 	if (!score==0):
 		score-=1
 	var finalScore=karaktere[score]
+	AutoloadData.current_score=finalScore
 	queue_free()
-	print(finalScore)
 
 
 func page_change():

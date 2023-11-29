@@ -1693,7 +1693,6 @@ frames = SubResource( 30 )
 position = Vector2( 70, -488 )
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 1
 speed_scale = 1.5
 playing = true
 
@@ -1810,14 +1809,13 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 756, -254 )
 frames = SubResource( 128 )
-frame = 5
 playing = true
 flip_h = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 211, -640 )
 frames = SubResource( 137 )
-frame = 2
+frame = 6
 playing = true
 flip_h = true
 
@@ -1827,7 +1825,7 @@ scale = Vector2( 2, 2 )
 z_index = 3
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 2
+frame = 1
 speed_scale = 1.5
 playing = true
 
