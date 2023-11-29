@@ -50,7 +50,7 @@ func set_profile(value: Dictionary) -> void:
 
 	# Now grades_array contains the integer values from the grades map
 	grades.text = str(grades_array)
-	tests.text = str(profile.tests.integerValue)
+	tests.text = str(grades_array.count)
 	time.text = str(profile.time.integerValue)
 
 
