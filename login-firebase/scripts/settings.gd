@@ -1,11 +1,12 @@
 extends Control
 
 onready var http : HTTPRequest = $HTTPRequest
-onready var username : LineEdit = $Container/VBoxContainer/Name/Label2
-onready var age : LineEdit = $Container/VBoxContainer/Age/Label2
-onready var character : LineEdit = $Container/VBoxContainer/Character/Label2
+onready var username : LineEdit = $Container/VBoxContainer/name/Label2
+onready var age : LineEdit = $Container/VBoxContainer/age/Label2
+onready var character : LineEdit = $Container/VBoxContainer/character/Label2
 onready var notification : Label = $Container/Notification
-
+onready var gender_sprite=$sprite
+var selected_gender="boy"
 var new_profile := false
 var information_sent := false
 var profile := {
@@ -15,6 +16,7 @@ var profile := {
 } setget set_profile
 
 func _ready() -> void:
+	gender_sprite.play("boy")
 	print("load_statistic")
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
 
@@ -62,6 +64,17 @@ func set_profile(value: Dictionary) -> void:
 	age.text = str(profile.age.integerValue)
 	character.text = str(profile.character.integerValue)
 
-
+func change_gender():
+	if (selected_gender=="boy"):
+		selected_gender="girl"
+		gender_sprite.play("girl")
+	else:
+		selected_gender="boy"
+		gender_sprite.play("boy")
+		
 func _on_Button2_pressed():
 	get_tree().change_scene("")
+
+
+func _on_next_pressed():
+	change_gender()
