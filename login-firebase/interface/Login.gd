@@ -21,7 +21,7 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		$Container/LoginButton.disabled = false
 	else:
 		notification.text = "Sign in sucessful!"
-		get_tree().change_scene("res://scn/database_test.tscn")
+		get_tree().change_scene("res://scn/settings.tscn")
 		
 
 
