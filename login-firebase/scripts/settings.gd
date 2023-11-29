@@ -36,6 +36,11 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 				popup("Information saved successfully")
 				information_sent = false
 			self.profile = result_body.fields
+			if (self.profile.character.stringValue=="boy"):
+				AutoloadData.is_boy=true
+			else:
+				AutoloadData.is_boy=false
+
 
 func popup(text):
 	popup.dialog_text=text
