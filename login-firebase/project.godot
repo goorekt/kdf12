@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Firebase="*res://static/Firebase.gd"
+AutoloadData="*res://scripts/autoload_data.gd"
 
 [display]
 

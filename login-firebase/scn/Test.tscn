@@ -23,7 +23,7 @@ animations = [ {
 script = ExtResource( 2 )
 
 [node name="Paper" type="Sprite" parent="."]
-position = Vector2( 506.5, 541.15 )
+position = Vector2( 956, 536 )
 scale = Vector2( 1.29483, 1.29483 )
 texture = ExtResource( 1 )
 
@@ -104,10 +104,10 @@ align = 1
 icon_align = 1
 
 [node name="numberLabel" type="Label" parent="Paper"]
-margin_left = -275.45
-margin_top = -355.984
-margin_right = -250.45
-margin_bottom = -333.984
+margin_left = -258.138
+margin_top = -306.0
+margin_right = -238.138
+margin_bottom = -288.0
 rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )

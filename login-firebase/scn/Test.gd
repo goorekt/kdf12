@@ -131,6 +131,7 @@ onready var three=$Paper/Question/options/three
 onready var previous=$Paper/previous
 onready var next=$Paper/next
 onready var give_button=$Paper/givein
+onready var page_number=$Paper/numberLabel
 var karaktere=[-3,0,2,4,7,10,12]
 
 func update_question():
@@ -163,11 +164,15 @@ func evaluate():
 		if (answers[i]==exam[i].correct):
 			score+=1
 	print("Du fik karakteren")
-	var finalScore=karaktere[score]-1
+	if (!score==0):
+		score-=1
+	var finalScore=karaktere[score]
+	queue_free()
 	print(finalScore)
 
 
 func page_change():
+	page_number.text=str(current_question_index+1)+"."
 	if (current_question_index==0):
 		previous.hide()
 	else:
