@@ -6,6 +6,7 @@ extends Node
 # var b = "text"
 var is_boy=true
 var current_score=5
+var taken=false
 var current_time=0
 var taking_test=false
 var playername

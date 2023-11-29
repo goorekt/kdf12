@@ -191,7 +191,7 @@ func update_question():
 
 
 func evaluate():
-	emit_signal("test_over")
+	AutoloadData.taken=true
 	hide()
 	print("*evaluate start")
 	var score=0
@@ -204,7 +204,7 @@ func evaluate():
 	AutoloadData.current_score=finalScore
 	AutoloadData.current_time=stepify(timer, 1)
 	AutoloadData.taking_test=false
-
+	emit_signal("test_over")
 	#profile.grades = { "integerValue": 1 }
 	profile.grade = { "integerValue": finalScore }
 	profile.time = { "integerValue": stepify(timer, 1) } # Erstat med variabel der holder værdien
@@ -222,8 +222,9 @@ func evaluate():
 	
 
 func _process(delta):
-	timer+=delta
-	time_label.text=str(stepify(timer, 1))
+	if (AutoloadData.taking_test):
+		timer+=delta
+		time_label.text=str(stepify(timer, 1))
 func page_change():
 	page_number.text=str(current_question_index+1)+"."
 	if (current_question_index==0):
