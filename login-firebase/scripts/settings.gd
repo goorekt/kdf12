@@ -42,6 +42,7 @@ func popup(text):
 	popup.show()
 func _on_Button_pressed() -> void:
 	print("button pressed")
+	
 	profile.name = { "stringValue": username.text } # Erstat med variabel der holder værdien
 	profile.age = { "integerValue": age.text } # Erstat med variabel der holder værdien
 	profile.character = { "stringValue": selected_gender } # Erstat med variabel der holder værdien
