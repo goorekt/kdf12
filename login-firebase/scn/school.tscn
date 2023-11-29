@@ -1693,6 +1693,7 @@ frames = SubResource( 30 )
 position = Vector2( 70, -488 )
 frames = SubResource( 37 )
 animation = "arrow"
+frame = 3
 speed_scale = 1.5
 playing = true
 
@@ -1719,7 +1720,7 @@ position = Vector2( 557, -448 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc3"
-frame = 4
+frame = 10
 playing = true
 
 [node name="lærer1" type="AnimatedSprite" parent="Node2D"]
@@ -1735,7 +1736,7 @@ position = Vector2( 249, -621 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "lærer2-book"
-frame = 5
+frame = 11
 playing = true
 
 [node name="npc5" type="AnimatedSprite" parent="Node2D"]
@@ -1821,7 +1822,7 @@ flip_h = true
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 211, -640 )
 frames = SubResource( 137 )
-frame = 2
+frame = 5
 playing = true
 flip_h = true
 
@@ -1831,7 +1832,7 @@ scale = Vector2( 2, 2 )
 z_index = 3
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 1
+frame = 4
 speed_scale = 1.5
 playing = true
 
