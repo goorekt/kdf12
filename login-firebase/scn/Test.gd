@@ -40,18 +40,18 @@ var questions = [
 	{
 		"text": "Hvilket organ fungerer som kroppens primære filter og renser blodet?",
 		"option_zero": "Hjertet",
-		"option_one": "Nyrerne",
-		"option_two": "Leveren",
+		"option_one": "Leveren",
+		"option_two": "Nyrerne",
 		"option_three": "Maven",
-		"correct": 1
+		"correct": 2
 	},
 	{
 		"text": "Hvad er funktionen af DNA i cellen?",
 		"option_zero": "At danne energi",
-		"option_one": "At lagre genetisk information",
+		"option_one": "At transportere næringsstoffer",
 		"option_two": "At syntetisere proteiner",
-		"option_three": "At transportere næringsstoffer",
-		"correct": 1
+		"option_three": "At lagre genetisk information",
+		"correct": 3
 	},
 	{
 		"text": "Hvad er formålet med mitose i en cellecyklus?",
@@ -78,12 +78,12 @@ var questions = [
 		"correct": 0
 	},
 	{
-		"text": "Hvad er den primære funktion af en plantecelle-vacuole?",
-		"option_zero": "At opbevare vand og næringsstoffer",
+		"text": "Hvad er den primære funktion af en vacuole i planteceller?",
+		"option_zero": "At danne sporeorganer",
 		"option_one": "At producere energi",
 		"option_two": "At syntetisere proteiner",
-		"option_three": "At danne sporeorganer",
-		"correct": 0
+		"option_three": "At opbevare vand og næringsstoffer",
+		"correct": 3
 	},
 	{
 		"text": "Hvilket væv forbinder muskler til knogler i kroppen?",
@@ -130,6 +130,8 @@ onready var two=$Paper/Question/options/two
 onready var three=$Paper/Question/options/three
 onready var previous=$Paper/previous
 onready var next=$Paper/next
+onready var give_button=$Paper/givein
+var karaktere=[-3,0,2,4,7,10,12]
 
 func update_question():
 	text.text=exam[current_question_index].text
@@ -141,6 +143,8 @@ func update_question():
 	one.pressed=false
 	two.pressed=false
 	three.pressed=false
+	if (answers[current_question_index]>3):
+		return
 	if (answers[current_question_index]==0):
 		zero.pressed=true
 	elif (answers[current_question_index]==1):
@@ -151,28 +155,40 @@ func update_question():
 		three.pressed=true
 func _ready():
 	print(exam)
-	update_question()
+	page_change()
 
-func _process(delta):
+func evaluate():
+	var score=0
+	for i in range(7):
+		if (answers[i]==exam[i].correct):
+			score+=1
+	print("Du fik karakteren")
+	var finalScore=karaktere[score]-1
+	print(finalScore)
+
+
+func page_change():
 	if (current_question_index==0):
 		previous.hide()
 	else:
 		previous.show()
 	
 	if (current_question_index==6):
+		give_button.show()
 		next.hide()
 	else:
+		give_button.hide()
 		next.show()
-
+	update_question()
+	
 func _on_next_pressed():
 	current_question_index+=1
-	update_question()
+	page_change()
 
 
 func _on_previous_pressed():
-
 	current_question_index-=1
-	update_question()
+	page_change()
 
 
 
@@ -203,3 +219,7 @@ func _on_three_pressed():
 	one.pressed=false
 	two.pressed=false
 	zero.pressed=false # Replace with function body.
+
+
+func _on_givein_pressed():
+	evaluate()

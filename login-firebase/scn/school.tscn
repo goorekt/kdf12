@@ -1,4 +1,4 @@
-[gd_scene load_steps=135 format=2]
+[gd_scene load_steps=153 format=2]
 
 [ext_resource path="res://assets/characters/npc/elever/NPC6.png" type="Texture" id=1]
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_Floors_48x48.png" type="Texture" id=2]
@@ -1561,6 +1561,102 @@ extents = Vector2( 82.5625, 47.5 )
 [sub_resource type="RectangleShape2D" id=119]
 extents = Vector2( 27.5, 46.5 )
 
+[sub_resource type="AtlasTexture" id=120]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=121]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 48, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=122]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 96, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=123]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 144, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=124]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=125]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 240, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=126]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 288, 604, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=127]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 336, 604, 48, 50 )
+
+[sub_resource type="SpriteFrames" id=128]
+animations = [ {
+"frames": [ SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
+[sub_resource type="AtlasTexture" id=129]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 0, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=130]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 48, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=131]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 96, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=132]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 144, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=133]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 192, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=134]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 240, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=135]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 288, 509, 48, 50 )
+
+[sub_resource type="AtlasTexture" id=136]
+flags = 4
+atlas = ExtResource( 8 )
+region = Rect2( 336, 509, 48, 50 )
+
+[sub_resource type="SpriteFrames" id=137]
+animations = [ {
+"frames": [ SubResource( 129 ), SubResource( 130 ), SubResource( 131 ), SubResource( 132 ), SubResource( 133 ), SubResource( 134 ), SubResource( 135 ), SubResource( 136 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 17 )
 
@@ -1597,7 +1693,7 @@ frames = SubResource( 30 )
 position = Vector2( 70, -488 )
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 4
+frame = 1
 speed_scale = 1.5
 playing = true
 
@@ -1608,7 +1704,7 @@ position = Vector2( 460, -383 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc1"
-frame = 5
+frame = 2
 playing = true
 
 [node name="npc2" type="AnimatedSprite" parent="Node2D"]
@@ -1616,7 +1712,7 @@ position = Vector2( 604, -289 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc2"
-frame = 5
+frame = 2
 playing = true
 
 [node name="npc3" type="AnimatedSprite" parent="Node2D"]
@@ -1624,6 +1720,7 @@ position = Vector2( 557, -448 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc3"
+frame = 9
 playing = true
 
 [node name="lærer1" type="AnimatedSprite" parent="Node2D"]
@@ -1631,7 +1728,6 @@ position = Vector2( 792, -225 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "lærer1"
-frame = 3
 playing = true
 
 [node name="lærer2" type="AnimatedSprite" parent="Node2D"]
@@ -1639,7 +1735,7 @@ position = Vector2( 249, -621 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "lærer2-book"
-frame = 1
+frame = 10
 playing = true
 
 [node name="npc5" type="AnimatedSprite" parent="Node2D"]
@@ -1647,7 +1743,6 @@ position = Vector2( 121, -234 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc4"
-frame = 3
 playing = true
 
 [node name="npc6" type="AnimatedSprite" parent="Node2D"]
@@ -1655,7 +1750,7 @@ position = Vector2( -22, -335 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc5"
-frame = 1
+frame = 4
 playing = true
 
 [node name="npc7" type="AnimatedSprite" parent="Node2D"]
@@ -1663,7 +1758,7 @@ position = Vector2( -24, -430 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc6"
-frame = 2
+frame = 5
 playing = true
 
 [node name="npc8" type="AnimatedSprite" parent="Node2D"]
@@ -1671,6 +1766,7 @@ position = Vector2( 168, -432 )
 z_index = 1
 frames = SubResource( 96 )
 animation = "npc7"
+frame = 3
 playing = true
 
 [node name="chairs" type="TileMap" parent="."]
@@ -1707,5 +1803,32 @@ shape = SubResource( 119 )
 
 [node name="Player" parent="." instance=ExtResource( 16 )]
 position = Vector2( 258, 87 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 756, -254 )
+frames = SubResource( 128 )
+frame = 5
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 211, -640 )
+frames = SubResource( 137 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="animationSigns2" type="AnimatedSprite" parent="."]
+position = Vector2( 258, 154 )
+scale = Vector2( 2, 2 )
+z_index = 3
+frames = SubResource( 37 )
+animation = "arrow"
+frame = 2
+speed_scale = 1.5
+playing = true
 
 [connection signal="body_entered" from="toHome" to="." method="_on_toHome_body_entered"]
