@@ -132,7 +132,7 @@ onready var previous=$Paper/previous
 onready var next=$Paper/next
 onready var give_button=$Paper/givein
 onready var page_number=$Paper/numberLabel
-var karaktere=[-3,0,2,4,7,10,12]
+var karaktere=["-3","00","02","4","7","10","12"]
 
 func update_question():
 	text.text=exam[current_question_index].text
@@ -155,7 +155,7 @@ func update_question():
 	else:
 		three.pressed=true
 func _ready():
-	print(exam)
+	AutoloadData.taking_test=true
 	page_change()
 
 func evaluate():
@@ -167,6 +167,7 @@ func evaluate():
 		score-=1
 	var finalScore=karaktere[score]
 	AutoloadData.current_score=finalScore
+	AutoloadData.taking_test=false
 	queue_free()
 
 

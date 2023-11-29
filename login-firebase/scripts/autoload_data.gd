@@ -5,8 +5,9 @@ extends Node
 # var a = 2
 # var b = "text"
 var is_boy=true
-var current_score
-
+var current_score=""
+var taking_test=false
+var playername
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

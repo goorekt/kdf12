@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://themes/kenneyUI.tres" type="Theme" id=1]
+[ext_resource path="res://assets/misc/page.png" type="Texture" id=2]
+[ext_resource path="res://scripts/scorepage.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.00001, -22 )
+scale = Vector2( 1.132, 1.132 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -140.0
+margin_top = -72.0
+margin_right = 40.0
+margin_bottom = 18.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-3"
+
+[node name="name" type="Label" parent="Sprite"]
+margin_left = -106.0
+margin_top = -43.0
+margin_right = 40.0
+margin_bottom = 18.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-3"
