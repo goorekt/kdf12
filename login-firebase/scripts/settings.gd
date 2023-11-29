@@ -6,7 +6,7 @@ onready var age : LineEdit = $Container/VBoxContainer/age/Label2
 
 onready var gender_sprite=$sprite
 onready var popup=$popup
-var selected_gender
+var selected_gender="boy"
 var new_profile := false
 var information_sent := false
 var profile := {
@@ -55,6 +55,8 @@ func _on_Button_pressed() -> void:
 			print("document updated")
 	information_sent = true
 	print("information sent")
+	yield(get_tree().create_timer(2), "timeout")
+	get_tree().change_scene("res://scn/bedroom.tscn")
 
 
 

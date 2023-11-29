@@ -11,9 +11,9 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if (Input.is_action_pressed("esc")):
+		get_tree().change_scene("res://scn/menu.tscn")
 
 
 func _on_toHome_body_entered(body):

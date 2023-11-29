@@ -9,8 +9,8 @@ func _on_BackButton_pressed():
 
 
 func _on_SettingsButton_pressed():
-	get_tree().change_scene("")
+	get_tree().change_scene("res://scn/settings.tscn")
 
 
 func _on_StatisticsButton_pressed():
-	get_tree().change_scene("")
+	get_tree().change_scene("res://scn/statistics.tscn")

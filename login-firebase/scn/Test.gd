@@ -1,8 +1,6 @@
 extends Node2D
 
 
-onready var Questions=$Questions
-onready var Question=$Questions/Question
 onready var fontt=load("res://assets/misc/fonts/PTMono-Regular.ttf")
 var questions = [
 	{
@@ -133,13 +131,37 @@ onready var next=$Paper/next
 onready var give_button=$Paper/givein
 onready var page_number=$Paper/numberLabel
 onready var time_label=$Paper/timerlabel
+onready var http : HTTPRequest = $HTTPRequest
 var timer=0
-func _ready():
-	AutoloadData.taking_test=true
-	page_change()
-	
 
 var karaktere=[-3,0,2,4,7,10,12]
+
+
+
+var new_profile := false
+var information_sent := false
+var profile := {
+	"grade": {},
+	"time": {}
+}
+
+func _ready():
+	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
+	AutoloadData.taking_test=true
+	page_change()
+
+func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
+	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
+	match response_code:
+		404:
+			new_profile = true
+			print("404")
+			return
+		200:
+			if information_sent:
+				information_sent = false
+				print("information sent")
+			self.profile = result_body.fields
 
 func update_question():
 	text.text=exam[current_question_index].text
@@ -164,6 +186,7 @@ func update_question():
 
 
 func evaluate():
+	print("*evaluate start")
 	var score=0
 	for i in range(7):
 		if (answers[i]==exam[i].correct):
@@ -174,6 +197,21 @@ func evaluate():
 	AutoloadData.current_score=finalScore
 	AutoloadData.current_time=stepify(timer, 1)
 	AutoloadData.taking_test=false
+
+	#profile.grades = { "integerValue": 1 }
+	profile.grade = { "integerValue": finalScore }
+	profile.time = { "integerValue": stepify(timer, 1) } # Erstat med variabel der holder værdien
+	match new_profile:
+		true:
+			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
+			print("document saved")
+		false:
+			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
+			print("document updated")
+	information_sent = true
+	print("information sent")
+	
+	yield(get_tree().create_timer(2), "timeout")
 	queue_free()
 
 func _process(delta):

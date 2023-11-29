@@ -187,6 +187,8 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "SECONDS"
 
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
 [connection signal="pressed" from="Paper/Question/options/zero" to="." method="_on_zero_pressed"]
 [connection signal="pressed" from="Paper/Question/options/one" to="." method="_on_one_pressed"]
 [connection signal="pressed" from="Paper/Question/options/two" to="." method="_on_two_pressed"]
@@ -194,3 +196,4 @@ text = "SECONDS"
 [connection signal="pressed" from="Paper/next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Paper/previous" to="." method="_on_previous_pressed"]
 [connection signal="pressed" from="Paper/givein" to="." method="_on_givein_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]

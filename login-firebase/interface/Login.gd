@@ -22,7 +22,6 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 	else:
 		notification.text = "Sign in sucessful!"
 		get_tree().change_scene("res://scn/settings.tscn")
-		
 
 
 func _on_Back_pressed():

@@ -46,6 +46,7 @@ func _on_Button_pressed() -> void:
 		}
 	}
 	#profile.grades = { "integerValue": 1 }
+	profile.grade = { "integerValue": 23 }
 	profile.tests = { "integerValue": 1 } # Erstat med variabel der holder værdien
 	profile.time = { "integerValue": 10 } # Erstat med variabel der holder værdien
 	match new_profile:
