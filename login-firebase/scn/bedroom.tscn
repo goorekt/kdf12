@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_3d_walls_48x48.png" type="Texture" id=1]
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_Floors_48x48.png" type="Texture" id=2]
@@ -533,6 +533,9 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 26/shape_one_way_margin = 0.0
 26/shapes = [  ]
 26/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=43]
+points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 
 [sub_resource type="TileSet" id=2]
 1/name = "4_Bedroom_48x48.png 1"
@@ -1109,6 +1112,83 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 43/shape_one_way_margin = 0.0
 43/shapes = [  ]
 43/z_index = 0
+44/name = "15_Christmas_48x48.png 44"
+44/texture = ExtResource( 4 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 48, 192, 48, 48 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "15_Christmas_48x48.png 45"
+45/texture = ExtResource( 4 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 528, 96, 48, 96 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape_one_way = false
+45/shape_one_way_margin = 0.0
+45/shapes = [  ]
+45/z_index = 0
+46/name = "15_Christmas_48x48.png 46"
+46/texture = ExtResource( 4 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 96, 288, 96, 144 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 0, 0 )
+46/navigation_offset = Vector2( 0, 0 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape_one_way = false
+46/shape_one_way_margin = 0.0
+46/shapes = [  ]
+46/z_index = 0
+47/name = "15_Christmas_48x48.png 47"
+47/texture = ExtResource( 4 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 384, 192, 48, 96 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 0, 0 )
+47/navigation_offset = Vector2( 0, 0 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_one_way = false
+47/shape_one_way_margin = 0.0
+47/shapes = [  ]
+47/z_index = 0
+48/name = "15_Christmas_48x48.png 48"
+48/texture = ExtResource( 4 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 48, 96, 48, 48 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 0, 0 )
+48/navigation_offset = Vector2( 0, 0 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape = SubResource( 43 )
+48/shape_one_way = false
+48/shape_one_way_margin = 1.0
+48/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 43 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+48/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 55.5, 22.5 )
@@ -1155,7 +1235,7 @@ animations = [ {
 extents = Vector2( 48.1406, 21.25 )
 
 [sub_resource type="RectangleShape2D" id=39]
-extents = Vector2( 93.25, 16 )
+extents = Vector2( 93.25, 37.5 )
 
 [sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 51.5, 56.5 )
@@ -1200,21 +1280,21 @@ z_index = 1
 tile_set = SubResource( 2 )
 cell_size = Vector2( 48, 48 )
 format = 1
-tile_data = PoolIntArray( -131067, 1, 0, -131064, 12, 0, -131063, 27, 0, -2, 21, 0, -1, 30, 0, -65536, 30, 0, -65535, 31, 0, -65522, 8, 0, 65534, 20, 0, 65535, 28, 0, 0, 28, 0, 1, 29, 0, 65543, 39, 0, 196606, 24, 0, 196607, 23, 0, 131072, 25, 0, 131074, 2, 0, 131075, 6, 0, 131076, 6, 0, 131077, 3, 0, 262142, 24, 0, 196608, 25, 0, 196610, 4, 0, 196611, 7, 0, 196612, 7, 0, 196613, 5, 0, 262151, 16, 0 )
+tile_data = PoolIntArray( -262146, 536870929, 0, -262145, 17, 0, -131067, 1, 0, -131064, 12, 0, -131063, 27, 0, -2, 21, 0, -1, 536870942, 0, -65536, 536870942, 0, -65535, 536870933, 0, -65522, 8, 0, 65534, 20, 0, 65535, 42, 0, 0, 42, 0, 1, 43, 0, 196606, 24, 0, 196607, 23, 0, 131072, 25, 0, 131074, 2, 0, 131075, 6, 0, 131076, 6, 0, 131077, 3, 0, 131081, 44, 0, 262142, 24, 0, 196608, 25, 0, 196610, 4, 0, 196611, 7, 0, 196612, 7, 0, 196613, 5, 0, 262151, 16, 0, 262152, 44, 0 )
 
 [node name="roomDec2" type="TileMap" parent="."]
-z_index = 2
+z_index = 4
 tile_set = SubResource( 2 )
 cell_size = Vector2( 48, 48 )
 format = 1
-tile_data = PoolIntArray( -262146, 536870929, 0, -262145, 17, 0, -131067, 1, 0, -131064, 12, 0, -1, 30, 0, -65536, 10, 0, -65535, 31, 0, 65534, 41, 0, 65535, 42, 0, 0, 42, 0, 1, 43, 0, 196606, 38, 0, 131077, 3, 0, 196610, 4, 0, 196611, 7, 0, 196612, 7, 0, 196613, 5, 0 )
+tile_data = PoolIntArray( -131064, 12, 0, 65543, 39, 0 )
 
 [node name="roomDec3" type="TileMap" parent="."]
-z_index = 6
+z_index = 5
 tile_set = SubResource( 2 )
 cell_size = Vector2( 48, 48 )
 format = 1
-tile_data = PoolIntArray( -262146, 536870929, 0, -262145, 17, 0, -131067, 1, 0, -131064, 12, 0, -1, 30, 0, -65536, 10, 0, -65535, 31, 0, 65534, 41, 0, 65535, 42, 0, 0, 42, 0, 1, 43, 0, 65543, 40, 0, 196606, 38, 0, 131077, 3, 0, 196610, 4, 0, 196611, 7, 0, 196612, 7, 0, 196613, 5, 0 )
+tile_data = PoolIntArray( -131064, 12, 0, -131058, 45, 0, 11, 47, 0, 65543, 40, 0, 196606, 38, 0 )
 
 [node name="toSchool" type="Area2D" parent="."]
 position = Vector2( 195, 260 )
@@ -1246,7 +1326,7 @@ position = Vector2( -46.8594, -138 )
 shape = SubResource( 38 )
 
 [node name="plant" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -3.75, 13 )
+position = Vector2( -3.75, -8.5 )
 shape = SubResource( 39 )
 
 [node name="bord" type="CollisionShape2D" parent="StaticBody2D"]
