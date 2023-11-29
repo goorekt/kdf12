@@ -22,6 +22,7 @@ func _on_toHome_body_entered(body):
 
 
 func _on_takeTest_body_entered(body):
+	$testArrow.hide()
 	if body.is_in_group("player"):
 		var test=test_scene.instance()
 		test_position.add_child(test)
