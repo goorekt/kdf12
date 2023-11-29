@@ -5,7 +5,8 @@ extends Node
 # var a = 2
 # var b = "text"
 var is_boy=true
-var current_score=""
+var current_score=5
+var current_time=0
 var taking_test=false
 var playername
 # Called when the node enters the scene tree for the first time.
