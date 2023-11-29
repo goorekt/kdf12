@@ -23,7 +23,7 @@ animations = [ {
 script = ExtResource( 2 )
 
 [node name="Paper" type="Sprite" parent="."]
-position = Vector2( 956, 536 )
+position = Vector2( 0, -0.999996 )
 scale = Vector2( 1.29483, 1.29483 )
 texture = ExtResource( 1 )
 

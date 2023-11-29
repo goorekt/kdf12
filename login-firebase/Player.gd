@@ -58,6 +58,7 @@ var velocity = Vector2()
 var direction="idle"
 
 func get_input():
+	
 	if is_boy:
 		velocity = Vector2()
 		if Input.is_action_pressed('right'):
@@ -172,6 +173,10 @@ func _ready():
 		girl.show()
 		boy.hide()
 func _physics_process(delta):
+		
+		
 	get_input()
+	if AutoloadData.taking_test:
+		return
 	velocity = move_and_slide(velocity)
 
