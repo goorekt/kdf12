@@ -1131,32 +1131,26 @@ extents = Vector2( 5604.5, 38 )
 extents = Vector2( 72.625, 161.062 )
 
 [sub_resource type="AtlasTexture" id=31]
-flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 384, 531, 48, 59 )
 
 [sub_resource type="AtlasTexture" id=32]
-flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 432, 531, 48, 59 )
 
 [sub_resource type="AtlasTexture" id=33]
-flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 480, 531, 48, 59 )
 
 [sub_resource type="AtlasTexture" id=34]
-flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 528, 531, 48, 59 )
 
 [sub_resource type="AtlasTexture" id=35]
-flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 576, 531, 48, 59 )
 
 [sub_resource type="AtlasTexture" id=36]
-flags = 4
 atlas = ExtResource( 7 )
 region = Rect2( 624, 531, 48, 59 )
 

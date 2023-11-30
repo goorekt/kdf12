@@ -95,7 +95,7 @@ margin_top = 282.0
 margin_right = 482.0
 margin_bottom = 300.0
 custom_fonts/font = SubResource( 8 )
-text = "Tag en test for at opdatere statistikken"
+text = "Complete a test to update your statistics"
 
 [node name="Button" type="Button" parent="Container"]
 margin_top = 380.0
