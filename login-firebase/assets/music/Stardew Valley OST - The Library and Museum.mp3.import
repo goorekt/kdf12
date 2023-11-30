@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Stardew Valley OST - The Library and Museum.mp3-b81d
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Glitter Sound Effect for Music or Editing.mp3-526fc4
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
