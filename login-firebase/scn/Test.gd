@@ -235,11 +235,15 @@ func page_change():
 
 
 func _on_next_pressed():
+	$click.play(0.86)
+	
 	current_question_index+=1
 	page_change()
 
 
 func _on_previous_pressed():
+	$click.play(0.86)
+	
 	current_question_index-=1
 	page_change()
 
@@ -247,6 +251,8 @@ func _on_previous_pressed():
 
 
 func _on_zero_pressed():
+	$click.play(0.86)
+	
 	answers[current_question_index]=0
 	one.pressed=false
 	two.pressed=false
@@ -254,6 +260,7 @@ func _on_zero_pressed():
 
 
 func _on_one_pressed():
+	$click.play(0.86)
 	answers[current_question_index]=1
 	zero.pressed=false
 	two.pressed=false
@@ -261,6 +268,7 @@ func _on_one_pressed():
 
 
 func _on_two_pressed():
+	$click.play(0.86)
 	answers[current_question_index]=2
 	one.pressed=false
 	zero.pressed=false
@@ -268,6 +276,7 @@ func _on_two_pressed():
 
 
 func _on_three_pressed():
+	$click.play(0.86)
 	answers[current_question_index]=3
 	one.pressed=false
 	two.pressed=false
@@ -275,4 +284,5 @@ func _on_three_pressed():
 
 
 func _on_givein_pressed():
+	$click.play(0.86)
 	evaluate()

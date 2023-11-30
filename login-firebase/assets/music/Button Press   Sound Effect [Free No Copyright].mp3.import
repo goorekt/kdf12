@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Button Press   Sound Effect [Free No Copyright].mp3-b08f99954fd9e15ada86516593e12f59.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Button Press   Sound Effect [Free No Copyright].mp3"
+dest_files=[ "res://.import/Button Press   Sound Effect [Free No Copyright].mp3-b08f99954fd9e15ada86516593e12f59.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

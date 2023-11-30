@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/misc/NotebookPaper-narrowruleLETTER_prev.webp" type="Texture" id=1]
 [ext_resource path="res://scn/Test.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/misc/fonts/PTMono-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/misc/a83961a96569971.png" type="Texture" id=5]
 [ext_resource path="res://themes/kenneyUI-green.tres" type="Theme" id=6]
+[ext_resource path="res://assets/music/Button Press   Sound Effect [Free No Copyright].mp3" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -188,6 +189,10 @@ custom_fonts/font = SubResource( 3 )
 text = "SECONDS"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 9.613
 
 [connection signal="pressed" from="Paper/Question/options/zero" to="." method="_on_zero_pressed"]
 [connection signal="pressed" from="Paper/Question/options/one" to="." method="_on_one_pressed"]

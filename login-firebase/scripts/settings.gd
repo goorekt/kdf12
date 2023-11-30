@@ -39,6 +39,8 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 
 
 func _on_Button_pressed() -> void:
+	$click.play(0.86)
+	yield(get_tree().create_timer(0.5), "timeout")
 	AutoloadData.playername=username.text
 	profile.name = { "stringValue": username.text } # Erstat med variabel der holder værdien
 	profile.age = { "integerValue": age.text } # Erstat med variabel der holder værdien
@@ -79,12 +81,18 @@ func change_gender():
 		gender_sprite.play("boy")
 		
 func _on_Button2_pressed():
+	$click.play(0.86)
+	yield(get_tree().create_timer(0.5), "timeout")
 	get_tree().change_scene("res://scn/menu.tscn")
 
 
 func _on_next_pressed():
+	$click.play(0.86)
+	yield(get_tree().create_timer(0.5), "timeout")
 	change_gender()
 
 
 func _on_previous_pressed():
+	$click.play(0.86)
+	yield(get_tree().create_timer(0.5), "timeout")
 	change_gender()

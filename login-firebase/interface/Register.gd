@@ -18,6 +18,8 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 
 
 func _on_RegisterButton_pressed():
+	$click.play(0.86)
+	yield(get_tree().create_timer(0.5), "timeout")
 	if password.text != confirm.text or email.text.empty() or password.text.empty():
 		notification.text = "Invalid password or email"
 		return
@@ -26,4 +28,6 @@ func _on_RegisterButton_pressed():
 
 
 func _on_Back_pressed():
+	$click.play(0.86)
+	yield(get_tree().create_timer(0.5), "timeout")
 	get_tree().change_scene("res://Main.tscn")

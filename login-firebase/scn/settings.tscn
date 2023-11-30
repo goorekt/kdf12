@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scripts/settings.gd" type="Script" id=1]
 [ext_resource path="res://themes/kenvector_future.ttf" type="DynamicFontData" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://assets/misc/a83961a96569971.png" type="Texture" id=7]
 [ext_resource path="res://themes/kenneyUI.tres" type="Theme" id=8]
 [ext_resource path="res://assets/characters/playable/Elev1.png" type="Texture" id=9]
+[ext_resource path="res://assets/music/Button Press   Sound Effect [Free No Copyright].mp3" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -249,6 +250,10 @@ margin_right = -833.0
 margin_bottom = -463.0
 theme = ExtResource( 8 )
 window_title = "Problem"
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = 9.613
 
 [connection signal="pressed" from="Container/VBoxContainer2/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer2/Button2" to="." method="_on_Button2_pressed"]

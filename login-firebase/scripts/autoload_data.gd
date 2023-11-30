@@ -18,6 +18,7 @@ var first_time_settings=true
 func _ready():
 	pass
 
+
 func change_scene(scene):
 
 	current_scene=scene
@@ -28,5 +29,4 @@ func change_scene(scene):
 #	pass
 
 func _process(delta):
-
 	pass
