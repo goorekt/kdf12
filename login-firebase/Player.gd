@@ -86,6 +86,7 @@ func get_input():
 		
 		
 		if (velocity.x==0 and velocity.y==0):
+			$walk.stop()
 			if (direction=="left"):
 				boy.play("IdleRight")
 				boy.set_flip_h(true)
@@ -97,6 +98,8 @@ func get_input():
 			elif (direction == "down"):
 				boy.play("IdleDown")
 		else:
+			if (!$walk.playing):
+				$walk.play(0.4)
 			if (direction=="left"):
 				boy.play("Right")
 				boy.set_flip_h(true)
@@ -108,6 +111,7 @@ func get_input():
 			elif (direction == "down"):
 				boy.play("Down")
 	else:
+		
 		velocity = Vector2()
 		if Input.is_action_pressed('right'):
 			velocity.x += 1
@@ -135,6 +139,7 @@ func get_input():
 			direction="down"
 			
 		if (velocity.x==0 and velocity.y==0):
+			$walk.stop()
 			if (direction=="left"):
 				girl.play("IdleRight")
 				girl.set_flip_h(true)
@@ -146,6 +151,9 @@ func get_input():
 			elif (direction == "down"):
 				girl.play("IdleDown")
 		else:
+			if (!$walk.playing):
+				$walk.play
+				$walk.play(0.4)
 			if (direction=="left"):
 				girl.play("Right")
 				girl.set_flip_h(true)
@@ -173,7 +181,7 @@ func _ready():
 		girl.show()
 		boy.hide()
 func _physics_process(delta):
-		
+	print($walk.is_playing())
 		
 	get_input()
 	if AutoloadData.taking_test:

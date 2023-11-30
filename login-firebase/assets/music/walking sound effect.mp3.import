@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/walking sound effect.mp3-b31287bbc01c07d99a1ae4117dac6c54.mp3str"
+
+[deps]
+
+source_file="res://assets/music/walking sound effect.mp3"
+dest_files=[ "res://.import/walking sound effect.mp3-b31287bbc01c07d99a1ae4117dac6c54.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

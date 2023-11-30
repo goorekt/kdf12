@@ -1,5 +1,6 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=80 format=2]
 
+[ext_resource path="res://assets/music/walking sound effect.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://assets/characters/playable/Elev1.png" type="Texture" id=3]
 [ext_resource path="res://assets/characters/playable/Elev2.png" type="Texture" id=4]
@@ -373,11 +374,16 @@ shape = SubResource( 2 )
 [node name="Boy" type="AnimatedSprite" parent="."]
 frames = SubResource( 27 )
 animation = "IdleDown"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Girl" type="AnimatedSprite" parent="."]
 frames = SubResource( 88 )
 animation = "IdleDown"
-frame = 1
+frame = 5
 playing = true
+
+[node name="walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 11.949
+pitch_scale = 2.01
