@@ -10,7 +10,6 @@ onready var test_position=$testPos
 func _ready():
 	$homesign.hide()
 	$karakterblad.hide()
-	AutoloadData.taken=false
 	if (AutoloadData.is_in_pause_menu):
 		$Player.position=AutoloadData.player_position
 		AutoloadData.is_in_pause_menu=false
@@ -43,7 +42,18 @@ func _on_Test_test_over():
 		$goodscore.play()
 	else:
 		$badscore.play()
+	
 	$karakterblad/Label.text=score_display+str(AutoloadData.current_score)
+	$karakterblad/Label2.text=AutoloadData.name
 	$karakterblad.show()
 	yield(get_tree().create_timer(2), "timeout")
 	$karakterblad.hide()
+
+
+func _on_badscore_finished():
+	$badscore.stop()
+	
+
+
+func _on_goodscore_finished():
+	$goodscore.stop()
