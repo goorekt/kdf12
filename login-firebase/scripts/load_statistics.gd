@@ -30,11 +30,9 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 func set_profile(value: Dictionary) -> void:
 	profile = value
 	if ("grade" in profile and "time" in profile):
-		print("Values found")
 		grade.text = str(profile.grade.integerValue)
 		time.text = str(profile.time.integerValue)+" Seconds"
 	else:
-		print("Values not found")
 		grade.text = "?"
 		time.text = "?"
 
