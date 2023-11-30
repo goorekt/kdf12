@@ -44,7 +44,7 @@ func _on_Test_test_over():
 		$badscore.play()
 	
 	$karakterblad/Label.text=score_display+str(AutoloadData.current_score)
-	$karakterblad/Label2.text=AutoloadData.name
+	$karakterblad/Label2.text=AutoloadData.playername
 	$karakterblad.show()
 	yield(get_tree().create_timer(2), "timeout")
 	$karakterblad.hide()
