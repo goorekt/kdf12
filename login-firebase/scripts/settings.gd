@@ -16,6 +16,8 @@ var profile := {
 } setget set_profile
 
 func _ready() -> void:
+	if(AutoloadData.first_time_settings):
+		$Container/VBoxContainer2/Button2.hide()
 	gender_sprite.play("boy")
 	print("load_statistic")
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
@@ -27,13 +29,11 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 	match response_code:
 		404:
 			print("404")
-			popup("Please, enter your information")
 			new_profile = true
 			return
 		200:
 			print("200")
 			if information_sent:
-				popup("Information saved successfully")
 				information_sent = false
 			self.profile = result_body.fields
 			if (self.profile.character.stringValue=="boy"):
@@ -41,10 +41,6 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 			else:
 				AutoloadData.is_boy=false
 
-
-func popup(text):
-	popup.dialog_text=text
-	popup.show()
 func _on_Button_pressed() -> void:
 	print("button pressed")
 	
@@ -61,7 +57,12 @@ func _on_Button_pressed() -> void:
 	information_sent = true
 	print("information sent")
 	yield(get_tree().create_timer(2), "timeout")
-	get_tree().change_scene("res://scn/bedroom.tscn")
+	if (AutoloadData.first_time_settings):
+		AutoloadData.first_time_settings=false
+		get_tree().change_scene("res://scn/bedroom.tscn")
+	else:
+		get_tree().change_scene("res://scn/menu.tscn")
+	
 
 
 
@@ -86,7 +87,7 @@ func change_gender():
 		gender_sprite.play("boy")
 		
 func _on_Button2_pressed():
-	get_tree().change_scene("")
+	get_tree().change_scene("res://scn/menu.tscn")
 
 
 func _on_next_pressed():

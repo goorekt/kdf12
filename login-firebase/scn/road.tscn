@@ -1257,6 +1257,7 @@ shape = SubResource( 40 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 170, 14 )
+speed = 500
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -2, 9 )
@@ -1280,7 +1281,7 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
-frame = 2
+frame = 1
 speed_scale = 1.5
 playing = true
 
@@ -1291,7 +1292,6 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
-frame = 1
 speed_scale = 1.5
 playing = true
 
@@ -1302,7 +1302,6 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
-frame = 1
 speed_scale = 1.5
 playing = true
 
@@ -1313,6 +1312,7 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
+frame = 5
 speed_scale = 1.5
 playing = true
 
@@ -1323,6 +1323,7 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
+frame = 5
 speed_scale = 1.5
 playing = true
 
@@ -1333,7 +1334,7 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
-frame = 5
+frame = 4
 speed_scale = 1.5
 playing = true
 
@@ -1343,8 +1344,10 @@ scale = Vector2( 3.00216, 4.40889 )
 z_index = 3
 frames = SubResource( 38 )
 animation = "arrow"
-frame = 5
+frame = 4
 speed_scale = 1.5
 playing = true
 
 [connection signal="body_entered" from="toSchool" to="." method="_on_toSchool_body_entered"]
+
+[editable path="Player"]
