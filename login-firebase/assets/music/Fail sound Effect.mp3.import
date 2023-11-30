@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Fail sound Effect.mp3-dceeebe4e5bb052257c093b7aae3fc
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

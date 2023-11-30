@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Button Press   Sound Effect [Free No Copyright].mp3-
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
