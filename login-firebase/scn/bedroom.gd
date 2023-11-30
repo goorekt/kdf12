@@ -12,7 +12,7 @@ var pause_screen
 func _ready():
 	
 	if (AutoloadData.is_in_pause_menu):
-		$Player.position=AutoloadData.player_position
+		$YSort/Player.position=AutoloadData.player_position
 		AutoloadData.is_in_pause_menu=false
 	AutoloadData.current_scene="res://scn/bedroom.tscn"
 	pass # Replace with function body.
@@ -22,7 +22,7 @@ func _ready():
 func _process(delta):
 	if (Input.is_action_pressed("esc")):
 		AutoloadData.is_in_pause_menu=true
-		AutoloadData.player_position=$Player.position
+		AutoloadData.player_position=$YSort/Player.position
 		get_tree().change_scene("res://scn/menu.tscn")
 
 

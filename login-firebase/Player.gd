@@ -152,7 +152,7 @@ func get_input():
 				girl.play("IdleDown")
 		else:
 			if (!$walk.playing):
-				$walk.play
+				$walk.play()
 				$walk.play(0.4)
 			if (direction=="left"):
 				girl.play("Right")
