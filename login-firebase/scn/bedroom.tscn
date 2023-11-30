@@ -1264,7 +1264,7 @@ margin_left = -869.0
 margin_top = -670.0
 margin_right = 1505.0
 margin_bottom = 670.0
-color = Color( 0.101961, 0.0862745, 0.270588, 1 )
+color = Color( 0.376471, 0.54902, 0.811765, 1 )
 
 [node name="KitchenShadowSingles48X48307" type="Sprite" parent="ColorRect"]
 position = Vector2( 805, 846 )
@@ -1296,6 +1296,7 @@ scale = Vector2( 2, 2 )
 z_index = 3
 frames = SubResource( 37 )
 animation = "arrow"
+frame = 4
 speed_scale = 1.5
 playing = true
 
