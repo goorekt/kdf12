@@ -8,8 +8,12 @@ var test_scene=preload("res://scn/Test.tscn")
 onready var test_position=$testPos
 
 func _ready():
-	$homesign.hide()
+	
 	$karakterblad.hide()
+	if (AutoloadData.taken):
+		$testArrow.hide()
+	else:
+		$homesign.hide()
 	if (AutoloadData.is_in_pause_menu):
 		$Player.position=AutoloadData.player_position
 		AutoloadData.is_in_pause_menu=false
@@ -37,6 +41,7 @@ func _on_takeTest_body_entered(body):
 
 
 func _on_Test_test_over():
+	
 	AutoloadData.second_exam_set=!AutoloadData.second_exam_set
 	var score_display=""
 	$homesign.show()
