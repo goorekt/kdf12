@@ -13,9 +13,10 @@ var player_position=Vector2(0,0)
 var current_scene
 var is_in_pause_menu=false
 var playername
-# Called when the node enters the scene tree for the first time.
+onready var audio=$AudioStreamPlayer
+
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func change_scene(scene):
 
