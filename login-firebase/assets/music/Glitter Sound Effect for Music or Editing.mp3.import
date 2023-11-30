@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Glitter Sound Effect for Music or Editing.mp3-526fc408ec8f0f1a3b18e4711a8ea2b1.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Glitter Sound Effect for Music or Editing.mp3"
+dest_files=[ "res://.import/Glitter Sound Effect for Music or Editing.mp3-526fc408ec8f0f1a3b18e4711a8ea2b1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

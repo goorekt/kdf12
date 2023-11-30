@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fail sound Effect.mp3-dceeebe4e5bb052257c093b7aae3fc8d.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Fail sound Effect.mp3"
+dest_files=[ "res://.import/Fail sound Effect.mp3-dceeebe4e5bb052257c093b7aae3fc8d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

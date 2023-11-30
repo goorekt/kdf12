@@ -39,6 +39,10 @@ func _on_Test_test_over():
 	$homesign.show()
 	if (AutoloadData.current_score==0 or AutoloadData.current_score==2):
 		score_display="0"
+	if (AutoloadData.current_score>4):
+		$goodscore.play()
+	else:
+		$badscore.play()
 	$karakterblad/Label.text=score_display+str(AutoloadData.current_score)
 	$karakterblad.show()
 	yield(get_tree().create_timer(2), "timeout")
