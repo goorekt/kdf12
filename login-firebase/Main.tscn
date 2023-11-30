@@ -12,8 +12,8 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 3273.0
-margin_bottom = 2330.0
+margin_right = 2058.0
+margin_bottom = 1215.0
 color = Color( 0.443137, 0.854902, 1, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
