@@ -12,11 +12,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if (Input.is_action_pressed("esc")):
-		get_tree().change_scene("res://scn/menu.tscn")
+#func _process(delta):
+#	pass
 
 
 func _on_toSchool_body_entered(body):
 	if body.is_in_group("player"):
-		get_tree().change_scene("res://scn/road.tscn")
+		get_tree().change_scene("res://scn/school.tscn")

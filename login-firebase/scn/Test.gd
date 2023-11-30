@@ -1,7 +1,6 @@
 extends Node2D
 
 
-onready var fontt=load("res://assets/misc/fonts/PTMono-Regular.ttf")
 var questions = [
 	{
 		"text": "Hvad kaldes den grundlæggende enhed for arvemateriale i en celle?",
@@ -132,14 +131,12 @@ onready var give_button=$Paper/givein
 onready var page_number=$Paper/numberLabel
 onready var time_label=$Paper/timerlabel
 onready var http : HTTPRequest = $HTTPRequest
+
+
+
 var timer=0
-
 signal test_over
-
 var karaktere=[-3,0,2,4,7,10,12]
-
-
-
 var new_profile := false
 var information_sent := false
 var profile := {
@@ -192,6 +189,7 @@ func update_question():
 
 func evaluate():
 	AutoloadData.taken=true
+	var time_done=stepify(timer, 1)
 	hide()
 	print("*evaluate start")
 	var score=0
@@ -202,12 +200,12 @@ func evaluate():
 		score-=1
 	var finalScore=karaktere[score]
 	AutoloadData.current_score=finalScore
-	AutoloadData.current_time=stepify(timer, 1)
+	AutoloadData.current_time=time_done
 	AutoloadData.taking_test=false
 	emit_signal("test_over")
 	#profile.grades = { "integerValue": 1 }
 	profile.grade = { "integerValue": finalScore }
-	profile.time = { "integerValue": stepify(timer, 1) } # Erstat med variabel der holder værdien
+	profile.time = { "integerValue": time_done } # Erstat med variabel der holder værdien
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
@@ -225,6 +223,7 @@ func _process(delta):
 	if (AutoloadData.taking_test):
 		timer+=delta
 		time_label.text=str(stepify(timer, 1))
+
 func page_change():
 	page_number.text=str(current_question_index+1)+"."
 	if (current_question_index==0):
@@ -239,7 +238,8 @@ func page_change():
 		give_button.hide()
 		next.show()
 	update_question()
-	
+
+
 func _on_next_pressed():
 	current_question_index+=1
 	page_change()

@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/extoriors/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/12_Hotel_and_Hospital_48x48.png" type="Texture" id=1]
 [ext_resource path="res://assets/extoriors/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/16_Office_48x48.png" type="Texture" id=2]
 [ext_resource path="res://assets/extoriors/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/2_City_Terrains_48x48.png" type="Texture" id=3]
 [ext_resource path="res://assets/extoriors/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/4_Generic_Buildings_48x48.png" type="Texture" id=4]
 [ext_resource path="res://assets/extoriors/modernexteriors-win/Modern_Exteriors_48x48/ME_Theme_Sorter_48x48/5_Floor_Modular_Buildings_48x48.png" type="Texture" id=5]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/4_User_Interface_Elements/UI_48x48.png" type="Texture" id=7]
+[ext_resource path="res://scripts/road.gd" type="Script" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "2_City_Terrains_48x48.png 0"
@@ -1118,7 +1121,49 @@ extents = Vector2( 8500.75, 809.75 )
 radius = 49.0
 height = 154.0
 
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 72.625, 161.062 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 384, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 432, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 480, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 528, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 576, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 624, 531, 48, 59 )
+
+[sub_resource type="SpriteFrames" id=38]
+animations = [ {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"loop": true,
+"name": "arrow",
+"speed": 5.0
+} ]
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="1" type="Node2D" parent="."]
 
@@ -1181,7 +1226,7 @@ tile_data = PoolIntArray( -393114, 5, 0, -327632, 5, 0, -327631, 5, 0, -327630, 
 tile_set = SubResource( 2 )
 cell_size = Vector2( 48, 48 )
 format = 1
-tile_data = PoolIntArray( -1638309, 64, 0, -1638308, 65, 0, -1638307, 65, 0, -1638306, 65, 0, -1638305, 65, 0, -1638304, 65, 0, -1638303, 65, 0, -1638302, 65, 0, -1638301, 65, 0, -1638300, 65, 0, -1638299, 65, 0, -1638298, 65, 0, -1638297, 65, 0, -1638296, 63, 0, -1572794, 23, 0, -1507257, 55, 0, -1441774, 8, 0, -1441755, 24, 0, -1441736, 36, 0, -1441735, 37, 0, -1441734, 37, 0, -1441733, 37, 0, -1441732, 37, 0, -1441731, 37, 0, -1441730, 37, 0, -1441729, 37, 0, -1441728, 37, 0, -1441727, 37, 0, -1441726, 37, 0, -1441725, 37, 0, -1441724, 37, 0, -1441723, 536870948, 0, -1441715, 36, 0, -1441714, 37, 0, -1441713, 37, 0, -1441712, 37, 0, -1441711, 37, 0, -1441710, 37, 0, -1441709, 536870948, 0, -1441693, 55, 0, -1376231, 13, 0, -1376224, 18, 0, -1376151, 13, 0, -1376144, 18, 0, -1245093, 54, 0, -1245086, 54, 0, -1114080, 41, 0, -1114071, 41, 0, -1114042, 22, 0, -1114028, 67, 0, -1114027, 68, 0, -1114022, 66, 0, -1048576, 0, 0, -1048573, 2, 0, -1048571, 2, 0, -1048569, 3, 0, -1048568, 5, 0, -1048565, 6, 0, -1048563, 6, 0, -1048562, 6, 0, -1048561, 6, 0, -1048559, 7, 0, -982984, 48, 0, -982977, 47, 0, -982963, 54, 0, -982949, 54, 0, -982942, 54, 0, -917419, 60, 0, -851898, 21, 0, -720871, 12, 0, -720864, 19, 0, -720840, 47, 0, -720833, 47, 0, -720819, 54, 0, -720812, 35, 0, -720805, 54, 0, -720798, 54, 0, -720791, 12, 0, -720784, 19, 0, -589768, 44, 0, -589761, 45, 0, -589747, 42, 0, -589726, 33, 0, -524263, 25, 0, -524256, 20, 0, -524251, 34, 0, -524204, 40, 0, -524183, 25, 0, -524176, 20, 0, -458706, 26, 0, -458661, 39, 0 )
+tile_data = PoolIntArray( -1638309, 64, 0, -1638308, 65, 0, -1638307, 65, 0, -1638306, 65, 0, -1638305, 65, 0, -1638304, 65, 0, -1638303, 65, 0, -1638302, 65, 0, -1638301, 65, 0, -1638300, 65, 0, -1638299, 65, 0, -1638298, 65, 0, -1638297, 65, 0, -1638296, 63, 0, -1572794, 23, 0, -1441774, 8, 0, -1441755, 24, 0, -1441736, 36, 0, -1441735, 37, 0, -1441734, 37, 0, -1441733, 37, 0, -1441732, 37, 0, -1441731, 37, 0, -1441730, 37, 0, -1441729, 37, 0, -1441728, 37, 0, -1441727, 37, 0, -1441726, 37, 0, -1441725, 37, 0, -1441724, 37, 0, -1441723, 536870948, 0, -1441715, 36, 0, -1441714, 37, 0, -1441713, 37, 0, -1441712, 37, 0, -1441711, 37, 0, -1441710, 37, 0, -1441709, 536870948, 0, -1441693, 55, 0, -1376231, 13, 0, -1376224, 18, 0, -1376151, 13, 0, -1376144, 18, 0, -1245093, 54, 0, -1245086, 54, 0, -1114080, 41, 0, -1114071, 41, 0, -1114042, 22, 0, -1114028, 67, 0, -1114027, 68, 0, -1114022, 66, 0, -1048576, 0, 0, -1048573, 2, 0, -1048571, 2, 0, -1048569, 3, 0, -1048568, 5, 0, -1048565, 6, 0, -1048563, 6, 0, -1048562, 6, 0, -1048561, 6, 0, -1048559, 7, 0, -982984, 48, 0, -982977, 47, 0, -982963, 54, 0, -982949, 54, 0, -982942, 54, 0, -917419, 60, 0, -851898, 21, 0, -720871, 12, 0, -720864, 19, 0, -720840, 47, 0, -720833, 47, 0, -720819, 54, 0, -720812, 35, 0, -720805, 54, 0, -720798, 54, 0, -720791, 12, 0, -720784, 19, 0, -589768, 44, 0, -589761, 45, 0, -589747, 42, 0, -589726, 33, 0, -524263, 25, 0, -524256, 20, 0, -524251, 34, 0, -524204, 40, 0, -524183, 25, 0, -524176, 20, 0, -458706, 26, 0, -458661, 39, 0 )
 
 [node name="buildingsempty" type="TileMap" parent="3"]
 tile_set = SubResource( 2 )
@@ -1226,3 +1271,102 @@ shape = SubResource( 4 )
 position = Vector2( 16390, -194 )
 rotation = 1.5708
 shape = SubResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 173, -170 )
+
+[node name="toSchool" type="Area2D" parent="."]
+position = Vector2( 195, 260 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toSchool"]
+position = Vector2( 14542.6, -510.062 )
+shape = SubResource( 37 )
+
+[node name="animationSigns2" type="AnimatedSprite" parent="."]
+position = Vector2( 800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 5
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns3" type="AnimatedSprite" parent="."]
+position = Vector2( 2800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 4
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns4" type="AnimatedSprite" parent="."]
+position = Vector2( 4800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 4
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns5" type="AnimatedSprite" parent="."]
+position = Vector2( 6800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 3
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns6" type="AnimatedSprite" parent="."]
+position = Vector2( 8800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 3
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns7" type="AnimatedSprite" parent="."]
+position = Vector2( 10800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 2
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns8" type="AnimatedSprite" parent="."]
+position = Vector2( 12800, 4 )
+rotation = -1.5708
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 2
+speed_scale = 1.5
+playing = true
+
+[node name="animationSigns9" type="AnimatedSprite" parent="."]
+position = Vector2( 14737, -291 )
+scale = Vector2( 3.00216, 4.40889 )
+z_index = 3
+frames = SubResource( 38 )
+animation = "arrow"
+frame = 2
+speed_scale = 1.5
+playing = true
+
+[connection signal="body_entered" from="toSchool" to="." method="_on_toSchool_body_entered"]
