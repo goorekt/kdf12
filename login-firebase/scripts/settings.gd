@@ -19,20 +19,16 @@ func _ready() -> void:
 	if(AutoloadData.first_time_settings):
 		$Container/VBoxContainer2/Button2.hide()
 	gender_sprite.play("boy")
-	print("load_statistic")
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
 
 #Tilføj HTTPRequest node til scenen og lav signal
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
-	print("start httprequest")
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
 	match response_code:
 		404:
-			print("404")
 			new_profile = true
 			return
 		200:
-			print("200")
 			if information_sent:
 				information_sent = false
 			self.profile = result_body.fields
@@ -42,7 +38,6 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 				AutoloadData.is_boy=false
 
 func _on_Button_pressed() -> void:
-	print("button pressed")
 	
 	profile.name = { "stringValue": username.text } # Erstat med variabel der holder værdien
 	profile.age = { "integerValue": age.text } # Erstat med variabel der holder værdien
@@ -50,10 +45,8 @@ func _on_Button_pressed() -> void:
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
-			print("document saved")
 		false:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
-			print("document updated")
 	information_sent = true
 	print("information sent")
 	yield(get_tree().create_timer(2), "timeout")
@@ -68,7 +61,6 @@ func _on_Button_pressed() -> void:
 
 #Bruges til at hente data fra databasen og ændre notes i godot
 func set_profile(value: Dictionary) -> void:
-	print("set profile")
 	profile = value
 	# Now grades_array contains the integer values from the grades map
 	username.text = profile.name.stringValue

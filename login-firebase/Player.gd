@@ -181,7 +181,6 @@ func _ready():
 		girl.show()
 		boy.hide()
 func _physics_process(delta):
-	print($walk.is_playing())
 		
 	get_input()
 	if AutoloadData.taking_test:

@@ -12,20 +12,16 @@ var profile := {
 } setget set_profile
 
 func _ready() -> void:
-	print("load_statistic")
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
 
 #Tilføj HTTPRequest node til scenen og lav signal
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
-	print("start httprequest")
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
 	match response_code:
 		404:
-			print("404")
 			new_profile = true
 			return
 		200:
-			print("200")
 			if information_sent:
 				information_sent = false
 			self.profile = result_body.fields

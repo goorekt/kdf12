@@ -157,12 +157,10 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 	match response_code:
 		404:
 			new_profile = true
-			print("404")
 			return
 		200:
 			if information_sent:
 				information_sent = false
-				print("information sent")
 			self.profile = result_body.fields
 
 func update_question():
@@ -191,7 +189,6 @@ func evaluate():
 	AutoloadData.taken=true
 	var time_done=stepify(timer, 1)
 	hide()
-	print("*evaluate start")
 	var score=0
 	for i in range(7):
 		if (answers[i]==exam[i].correct):
@@ -209,12 +206,9 @@ func evaluate():
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
-			print("document saved")
 		false:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
-			print("document updated")
 	information_sent = true
-	print("information sent")
 	
 	yield(get_tree().create_timer(2), "timeout")
 	

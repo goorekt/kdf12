@@ -15,7 +15,6 @@ var profile := {
 
 func _ready() -> void:
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)
-	print("firebase.get_document done")
 
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray) -> void:
@@ -24,18 +23,15 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		404:
 			notification.text = "Please, enter your information"
 			new_profile = true
-			print("404")
 			return
 		200:
 			if information_sent:
 				notification.text = "Information saved successfully"
 				information_sent = false
-				print("information sent")
 			self.profile = result_body.fields
 
 
 func _on_Button_pressed() -> void:
-	print("button pressed")
 	profile.grades = {
 		"mapValue": {
 			"fields": {
@@ -52,12 +48,9 @@ func _on_Button_pressed() -> void:
 	match new_profile:
 		true:
 			Firebase.save_document("users?documentId=%s" % Firebase.user_info.id, profile, http)
-			print("document saved")
 		false:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
-			print("document updated")
 	information_sent = true
-	print("information sent")
 
 
 func _on_go_to_statistics_pressed():
