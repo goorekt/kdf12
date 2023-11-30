@@ -374,11 +374,13 @@ shape = SubResource( 2 )
 [node name="Boy" type="AnimatedSprite" parent="."]
 frames = SubResource( 27 )
 animation = "IdleDown"
+frame = 4
 playing = true
 
 [node name="Girl" type="AnimatedSprite" parent="."]
 frames = SubResource( 88 )
 animation = "IdleDown"
+frame = 4
 playing = true
 
 [node name="walk" type="AudioStreamPlayer" parent="."]
