@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://themes/kenneyUI-yellow.tres" type="Theme" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/misc/b46dc06f1285263bd6c5d8aebc574e16.jpg" type="Texture" id=4]
 [ext_resource path="res://themes/kenneyUI-green.tres" type="Theme" id=5]
 [ext_resource path="res://assets/music/Button Press   Sound Effect [Free No Copyright].mp3" type="AudioStream" id=6]
+[ext_resource path="res://assets/misc/kdf12loho.png" type="Texture" id=7]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -60,6 +61,11 @@ text = "quit"
 [node name="click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 volume_db = 9.613
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 883, 298 )
+scale = Vector2( 1.17, 1.17 )
+texture = ExtResource( 7 )
 
 [connection signal="pressed" from="VBoxContainer/LoginButton" to="." method="_on_LoginButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/RegisterButton" to="." method="_on_RegisterButton_pressed"]
