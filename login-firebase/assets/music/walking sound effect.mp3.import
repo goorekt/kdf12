@@ -11,5 +11,5 @@ dest_files=[ "res://.import/walking sound effect.mp3-b31287bbc01c07d99a1ae4117da
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
