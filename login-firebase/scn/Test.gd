@@ -146,6 +146,8 @@ var profile := {
 
 func _ready():
 	hide()
+	if (AutoloadData.second_exam_set):
+		exam=questions.slice(0,6)
 	position.x=get_tree().get_nodes_in_group("testpos")[0].position.x
 	position.y=get_tree().get_nodes_in_group("testpos")[0].position.y
 	Firebase.get_document("users/%s" % Firebase.user_info.id, http)

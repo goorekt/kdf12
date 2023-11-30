@@ -14,7 +14,7 @@ var current_scene
 var is_in_pause_menu=false
 var playername
 var first_time_settings=true
-
+var second_exam_set=false
 func _ready():
 	pass
 
