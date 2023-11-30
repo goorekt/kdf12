@@ -10,7 +10,8 @@ config_version=4
 
 [application]
 
-config/name="test-login-firebase"
+config/name="Kan du få 12?"
+config/description="Kan du få 12?"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
