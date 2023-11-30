@@ -11,7 +11,7 @@
 [ext_resource path="res://assets/characters/playable/Elev1.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 60
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -114,59 +114,59 @@ margin_bottom = 423.0
 
 [node name="Label" type="Label" parent="Container"]
 margin_right = 482.0
-margin_bottom = 36.0
+margin_bottom = 68.0
 custom_fonts/font = SubResource( 1 )
 text = "SETTINGS"
 align = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container"]
-margin_top = 40.0
+margin_top = 72.0
 margin_right = 482.0
-margin_bottom = 436.0
+margin_bottom = 452.0
 rect_min_size = Vector2( 240, 0 )
 size_flags_vertical = 3
 custom_constants/separation = 50
 
 [node name="name" type="VBoxContainer" parent="Container/VBoxContainer"]
 margin_right = 482.0
-margin_bottom = 173.0
+margin_bottom = 165.0
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Container/VBoxContainer/name"]
-margin_top = 24.0
+margin_top = 22.0
 margin_right = 482.0
-margin_bottom = 60.0
+margin_bottom = 58.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 2 )
 text = "Name"
 
 [node name="Label2" type="LineEdit" parent="Container/VBoxContainer/name"]
-margin_top = 88.0
+margin_top = 84.0
 margin_right = 482.0
-margin_bottom = 173.0
+margin_bottom = 165.0
 size_flags_vertical = 3
 theme = ExtResource( 5 )
 custom_fonts/font = SubResource( 5 )
 expand_to_text_length = true
 
 [node name="age" type="VBoxContainer" parent="Container/VBoxContainer"]
-margin_top = 223.0
+margin_top = 215.0
 margin_right = 482.0
-margin_bottom = 396.0
+margin_bottom = 380.0
 size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Container/VBoxContainer/age"]
-margin_top = 24.0
+margin_top = 22.0
 margin_right = 482.0
-margin_bottom = 60.0
+margin_bottom = 58.0
 size_flags_vertical = 6
 custom_fonts/font = SubResource( 3 )
 text = "Age"
 
 [node name="Label2" type="LineEdit" parent="Container/VBoxContainer/age"]
-margin_top = 88.0
+margin_top = 84.0
 margin_right = 482.0
-margin_bottom = 173.0
+margin_bottom = 165.0
 size_flags_vertical = 3
 theme = ExtResource( 5 )
 custom_fonts/font = SubResource( 6 )

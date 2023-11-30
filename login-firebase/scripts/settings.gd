@@ -48,7 +48,6 @@ func _on_Button_pressed() -> void:
 		false:
 			Firebase.update_document("users/%s" % Firebase.user_info.id, profile, http)
 	information_sent = true
-	print("information sent")
 	yield(get_tree().create_timer(2), "timeout")
 	if (AutoloadData.first_time_settings):
 		AutoloadData.first_time_settings=false

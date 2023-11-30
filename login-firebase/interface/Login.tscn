@@ -16,14 +16,14 @@ margin_bottom = 2330.0
 color = Color( 0.443137, 0.854902, 1, 1 )
 
 [node name="Container" type="VBoxContainer" parent="."]
-anchor_left = 0.468
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.601
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -85.232
-margin_top = -121.0
-margin_right = 29.576
-margin_bottom = 124.0
+margin_left = -185.084
+margin_top = -148.0
+margin_right = 185.084
+margin_bottom = 148.0
 custom_constants/separation = 10
 
 [node name="Title" type="Label" parent="Container"]

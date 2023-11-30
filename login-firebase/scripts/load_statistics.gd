@@ -28,11 +28,13 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 
 #Bruges til at hente data fra databasen og ændre notes i godot
 func set_profile(value: Dictionary) -> void:
-	if ("grade" in profile and "time" in profile and 
-		"integerValue" in profile.grade and "integerValue" in profile.time):
+	profile = value
+	if ("grade" in profile and "time" in profile):
+		print("Values found")
 		grade.text = str(profile.grade.integerValue)
-		time.text = str(profile.time.integerValue)
+		time.text = str(profile.time.integerValue)+" Seconds"
 	else:
+		print("Values not found")
 		grade.text = "?"
 		time.text = "?"
 
