@@ -28,4 +28,8 @@ func _process(delta):
 
 func _on_toSchool_body_entered(body):
 	if body.is_in_group("player"):
-		AutoloadData.change_scene("res://scn/road.tscn")
+		$door.play(0.5)
+
+
+func _on_door_finished():
+	AutoloadData.change_scene("res://scn/road.tscn")

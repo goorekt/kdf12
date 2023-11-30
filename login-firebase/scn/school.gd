@@ -23,7 +23,9 @@ func _process(delta):
 
 func _on_toHome_body_entered(body):
 	if body.is_in_group("player"):
-		AutoloadData.change_scene("res://scn/bedroom.tscn")
+		$door2.play(0.5)
+		
+		
 
 
 func _on_takeTest_body_entered(body):
@@ -59,3 +61,7 @@ func _on_badscore_finished():
 
 func _on_goodscore_finished():
 	$goodscore.queue_free()
+
+
+func _on_door2_finished():
+	AutoloadData.change_scene("res://scn/bedroom.tscn")
