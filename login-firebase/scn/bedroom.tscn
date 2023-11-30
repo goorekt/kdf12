@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_3d_walls_48x48.png" type="Texture" id=1]
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Room_Builder_subfiles_48x48/Room_Builder_Floors_48x48.png" type="Texture" id=2]
@@ -9,6 +9,16 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scn/bedroom.gd" type="Script" id=8]
 [ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/4_User_Interface_Elements/UI_48x48.png" type="Texture" id=9]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Christmas_Shadow_Singles_48x48_3.png" type="Texture" id=10]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_309.png" type="Texture" id=11]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_307.png" type="Texture" id=12]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_308.png" type="Texture" id=13]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_100.png" type="Texture" id=14]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_24.png" type="Texture" id=15]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_92.png" type="Texture" id=16]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_22.png" type="Texture" id=17]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_23.png" type="Texture" id=18]
+[ext_resource path="res://assets/interiors/Modern_Interiors_v41.4/1_Interiors/48x48/Kitchen_Shadow_Singles_48x48_93.png" type="Texture" id=19]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 144, 0, 144 )
@@ -533,6 +543,56 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 26/shape_one_way_margin = 0.0
 26/shapes = [  ]
 26/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 55.5, 22.5 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 9 )
+region = Rect2( 384, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 9 )
+region = Rect2( 432, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 9 )
+region = Rect2( 480, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 9 )
+region = Rect2( 528, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 9 )
+region = Rect2( 576, 531, 48, 59 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 9 )
+region = Rect2( 624, 531, 48, 59 )
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
+"loop": true,
+"name": "arrow",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=38]
+extents = Vector2( 48.1406, 21.25 )
+
+[sub_resource type="RectangleShape2D" id=39]
+extents = Vector2( 93.25, 20 )
+
+[sub_resource type="RectangleShape2D" id=40]
+extents = Vector2( 51.5, 56.5 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 67.5, 29.5 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 49, 28 )
 
 [sub_resource type="ConvexPolygonShape2D" id=43]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
@@ -1190,56 +1250,6 @@ points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 } ]
 48/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=23]
-extents = Vector2( 55.5, 22.5 )
-
-[sub_resource type="AtlasTexture" id=31]
-atlas = ExtResource( 9 )
-region = Rect2( 384, 531, 48, 59 )
-
-[sub_resource type="AtlasTexture" id=32]
-atlas = ExtResource( 9 )
-region = Rect2( 432, 531, 48, 59 )
-
-[sub_resource type="AtlasTexture" id=33]
-atlas = ExtResource( 9 )
-region = Rect2( 480, 531, 48, 59 )
-
-[sub_resource type="AtlasTexture" id=34]
-atlas = ExtResource( 9 )
-region = Rect2( 528, 531, 48, 59 )
-
-[sub_resource type="AtlasTexture" id=35]
-atlas = ExtResource( 9 )
-region = Rect2( 576, 531, 48, 59 )
-
-[sub_resource type="AtlasTexture" id=36]
-atlas = ExtResource( 9 )
-region = Rect2( 624, 531, 48, 59 )
-
-[sub_resource type="SpriteFrames" id=37]
-animations = [ {
-"frames": [ SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ) ],
-"loop": true,
-"name": "arrow",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=38]
-extents = Vector2( 48.1406, 21.25 )
-
-[sub_resource type="RectangleShape2D" id=39]
-extents = Vector2( 93.25, 16 )
-
-[sub_resource type="RectangleShape2D" id=40]
-extents = Vector2( 51.5, 56.5 )
-
-[sub_resource type="RectangleShape2D" id=41]
-extents = Vector2( 67.5, 29.5 )
-
-[sub_resource type="RectangleShape2D" id=42]
-extents = Vector2( 49, 28 )
-
 [node name="Node2D2" type="Node2D"]
 script = ExtResource( 8 )
 
@@ -1255,6 +1265,10 @@ margin_right = 1505.0
 margin_bottom = 670.0
 color = Color( 0.101961, 0.0862745, 0.270588, 1 )
 
+[node name="KitchenShadowSingles48X48307" type="Sprite" parent="ColorRect"]
+position = Vector2( 805, 846 )
+texture = ExtResource( 12 )
+
 [node name="roomFloor" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 48, 48 )
@@ -1269,35 +1283,11 @@ cell_custom_transform = Transform2D( 48, 0, 0, 48, 0, 0 )
 format = 1
 tile_data = PoolIntArray( -262147, 1, 0, -262146, 4, 0, -327680, 4, 0, -327678, 4, 0, -327676, 8, 0, -131075, 2, 0, -131074, 26, 0, -131073, 26, 0, -196608, 26, 0, -196607, 26, 0, -196606, 26, 0, -196605, 26, 0, -196604, 9, 0, -65539, 2, 0, -65538, 26, 0, -65537, 26, 0, -131072, 26, 0, -131071, 26, 0, -131070, 26, 0, -131069, 26, 0, -131068, 10, 0, -131067, 4, 0, -131065, 4, 0, -131064, 4, 0, -131062, 8, 0, -131059, 1, 0, -131058, 4, 0, -131057, 4, 0, -131055, 8, 0, -3, 2, 0, -2, 26, 0, -1, 26, 0, -65536, 26, 0, -65533, 26, 0, 65533, 2, 0, 3, -1610612712, 0, 4, -1610612712, 0, 5, -1610612712, 0, 6, -1610612712, 0, 7, -1610612712, 0, 8, -1610612712, 0, 9, -1610612712, 0, 10, 10, 0, 11, 4, 0, 13, 3, 0, 14, -1610612712, 0, 15, -1610612712, 0, 16, -1610612712, 0, 17, 9, 0, 131069, 2, 0, 65538, -1610612712, 0, 65539, -1610612712, 0, 65540, -1610612712, 0, 65541, -1610612712, 0, 65542, -1610612712, 0, 65543, -1610612712, 0, 65544, -1610612712, 0, 65545, -1610612712, 0, 65550, -1610612712, 0, 65551, -1610612712, 0, 65552, -1610612712, 0, 65553, 9, 0, 196605, 2, 0, 196606, -1610612712, 0, 131075, -1610612712, 0, 131076, -1610612712, 0, 131077, -1610612712, 0, 131078, -1610612712, 0, 131079, -1610612712, 0, 131080, -1610612712, 0, 131081, -1610612712, 0, 131082, -1610612712, 0, 131083, -1610612712, 0, 131084, -1610612712, 0, 131085, -1610612712, 0, 131086, -1610612712, 0, 131087, -1610612712, 0, 131088, -1610612712, 0, 131089, 9, 0, 262141, 2, 0, 196608, -1610612712, 0, 196611, -1610612712, 0, 196612, -1610612712, 0, 196613, -1610612712, 0, 196614, -1610612712, 0, 196615, -1610612712, 0, 196616, -1610612712, 0, 196617, -1610612712, 0, 196618, 11, 0, 196619, 18, 0, 196621, 5, 0, 196622, -1610612712, 0, 196623, -1610612712, 0, 196624, -1610612712, 0, 196625, 9, 0, 327677, 2, 0, 327679, -1610612712, 0, 262144, -1610612712, 0, 262145, -1610612712, 0, 262146, -1610612712, 0, 262147, -1610612712, 0, 262148, -1610612712, 0, 262149, -1610612712, 0, 262150, -1610612712, 0, 262151, -1610612712, 0, 262152, -1610612712, 0, 262153, -1610612712, 0, 262154, 9, 0, 262158, -1610612712, 0, 262159, -1610612712, 0, 262160, -1610612712, 0, 262161, 9, 0, 393213, 17, 0, 393214, 18, 0, 393215, 18, 0, 327680, 18, 0, 327682, 19, 0, 327685, 17, 0, 327686, 18, 0, 327687, 18, 0, 327688, 18, 0, 327689, 18, 0, 327690, 19, 0, 327693, 17, 0, 327694, 18, 0, 327696, 18, 0, 327697, 19, 0 )
 
-[node name="roomDec" type="TileMap" parent="."]
-z_index = 1
-tile_set = SubResource( 2 )
-cell_size = Vector2( 48, 48 )
-format = 1
-tile_data = PoolIntArray( -262146, 536870929, 0, -262145, 17, 0, -131067, 1, 0, -131064, 12, 0, -131063, 27, 0, -2, 21, 0, -1, 536870942, 0, -65536, 536870942, 0, -65535, 536870933, 0, -65522, 8, 0, 65534, 20, 0, 65535, 42, 0, 0, 42, 0, 1, 43, 0, 196606, 24, 0, 196607, 23, 0, 131072, 25, 0, 131074, 2, 0, 131075, 6, 0, 131076, 6, 0, 131077, 3, 0, 131081, 44, 0, 262142, 24, 0, 196608, 25, 0, 196610, 4, 0, 196611, 7, 0, 196612, 7, 0, 196613, 5, 0, 262151, 16, 0, 262152, 44, 0 )
-
-[node name="roomDec2" type="TileMap" parent="."]
-z_index = 4
-tile_set = SubResource( 2 )
-cell_size = Vector2( 48, 48 )
-format = 1
-tile_data = PoolIntArray( -131064, 12, 0, 65543, 39, 0 )
-
-[node name="roomDec3" type="TileMap" parent="."]
-z_index = 5
-tile_set = SubResource( 2 )
-cell_size = Vector2( 48, 48 )
-format = 1
-tile_data = PoolIntArray( -131064, 12, 0, -131058, 45, 0, 11, 47, 0, 65543, 40, 0, 196606, 38, 0 )
-
 [node name="toSchool" type="Area2D" parent="."]
 position = Vector2( 195, 260 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="toSchool"]
 shape = SubResource( 23 )
-
-[node name="Player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 754, 48 )
 
 [node name="animationSigns2" type="AnimatedSprite" parent="."]
 position = Vector2( 192, 218 )
@@ -1305,7 +1295,7 @@ scale = Vector2( 2, 2 )
 z_index = 3
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 1
+frame = 3
 speed_scale = 1.5
 playing = true
 
@@ -1320,7 +1310,7 @@ position = Vector2( -46.8594, -138 )
 shape = SubResource( 38 )
 
 [node name="plant" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -3.75, -8.5 )
+position = Vector2( -1, 12 )
 shape = SubResource( 39 )
 
 [node name="bord" type="CollisionShape2D" parent="StaticBody2D"]
@@ -1338,5 +1328,68 @@ shape = SubResource( 42 )
 [node name="pausescreen" type="Position2D" parent="."]
 position = Vector2( -879, -659 )
 z_index = 5
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 754, 48 )
+
+[node name="ChristmasShadowSingles48X483" type="Sprite" parent="YSort"]
+position = Vector2( 382, 116 )
+z_index = 3
+texture = ExtResource( 10 )
+
+[node name="bord" type="Sprite" parent="YSort"]
+position = Vector2( -24, 176 )
+z_index = 3
+texture = ExtResource( 13 )
+
+[node name="KitchenShadowSingles48X48309" type="Sprite" parent="YSort/bord"]
+position = Vector2( 40, 0 )
+texture = ExtResource( 11 )
+
+[node name="KitchenShadowSingles48X48307" type="Sprite" parent="YSort/bord"]
+position = Vector2( -40, 0 )
+texture = ExtResource( 12 )
+
+[node name="kitchentable" type="Sprite" parent="YSort"]
+position = Vector2( -72, -16 )
+z_index = 3
+texture = ExtResource( 17 )
+
+[node name="KitchenShadowSingles48X4823" type="Sprite" parent="YSort/kitchentable"]
+position = Vector2( 48, 0 )
+texture = ExtResource( 18 )
+
+[node name="KitchenShadowSingles48X4823" type="Sprite" parent="YSort/kitchentable/KitchenShadowSingles48X4823"]
+position = Vector2( 47, 0 )
+texture = ExtResource( 18 )
+
+[node name="KitchenShadowSingles48X4824" type="Sprite" parent="YSort/kitchentable/KitchenShadowSingles48X4823/KitchenShadowSingles48X4823"]
+position = Vector2( 48, 0 )
+texture = ExtResource( 15 )
+
+[node name="KitchenShadowSingles48X4892" type="Sprite" parent="YSort/kitchentable"]
+position = Vector2( 0, 40 )
+texture = ExtResource( 16 )
+
+[node name="KitchenShadowSingles48X4893" type="Sprite" parent="YSort/kitchentable/KitchenShadowSingles48X4892"]
+position = Vector2( 48, 0 )
+texture = ExtResource( 19 )
+
+[node name="KitchenShadowSingles48X4893" type="Sprite" parent="YSort/kitchentable/KitchenShadowSingles48X4892/KitchenShadowSingles48X4893"]
+position = Vector2( 48, 0 )
+texture = ExtResource( 19 )
+
+[node name="KitchenShadowSingles48X48100" type="Sprite" parent="YSort/kitchentable/KitchenShadowSingles48X4892/KitchenShadowSingles48X4893"]
+position = Vector2( 96, 0 )
+texture = ExtResource( 14 )
+
+[node name="roomDec" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+cell_size = Vector2( 48, 48 )
+cell_y_sort = true
+format = 1
+tile_data = PoolIntArray( -262146, 536870929, 0, -262145, 17, 0, -131067, 1, 0, -131064, 12, 0, -131063, 27, 0, -131057, 45, 0, -65522, 8, 0, 11, 47, 0, 196606, 24, 0, 196607, 23, 0, 131072, 25, 0, 131074, 2, 0, 131075, 6, 0, 131076, 6, 0, 131077, 3, 0, 131081, 44, 0, 262142, 24, 0, 196608, 25, 0, 196610, 4, 0, 196611, 7, 0, 196612, 7, 0, 196613, 5, 0, 262151, 16, 0, 262152, 44, 0 )
 
 [connection signal="body_entered" from="toSchool" to="." method="_on_toSchool_body_entered"]
