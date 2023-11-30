@@ -14,6 +14,7 @@ var current_scene
 var is_in_pause_menu=false
 var playername
 onready var audio=$AudioStreamPlayer
+var first_time_settings=true
 
 func _ready():
 	pass

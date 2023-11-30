@@ -1240,7 +1240,7 @@ extents = Vector2( 67.5, 29.5 )
 [sub_resource type="RectangleShape2D" id=42]
 extents = Vector2( 49, 28 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource( 8 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1305,7 +1305,7 @@ scale = Vector2( 2, 2 )
 z_index = 3
 frames = SubResource( 37 )
 animation = "arrow"
-frame = 2
+frame = 1
 speed_scale = 1.5
 playing = true
 
