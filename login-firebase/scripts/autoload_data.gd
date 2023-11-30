@@ -20,9 +20,9 @@ func _ready():
 
 
 func change_scene(scene):
-
+	$door2.play(0.7)
 	current_scene=scene
-
+	
 	get_tree().change_scene(scene)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -14,6 +14,7 @@ func _ready():
 		$Player.position=AutoloadData.player_position
 		AutoloadData.is_in_pause_menu=false
 
+		
 func _process(delta):
 	if (Input.is_action_pressed("esc") and !AutoloadData.taking_test):
 		AutoloadData.is_in_pause_menu=true
@@ -23,8 +24,8 @@ func _process(delta):
 
 func _on_toHome_body_entered(body):
 	if body.is_in_group("player"):
-		$door2.play(0.5)
-		
+
+		AutoloadData.change_scene("res://scn/bedroom.tscn")
 		
 
 
@@ -62,6 +63,3 @@ func _on_badscore_finished():
 func _on_goodscore_finished():
 	$goodscore.queue_free()
 
-
-func _on_door2_finished():
-	AutoloadData.change_scene("res://scn/bedroom.tscn")

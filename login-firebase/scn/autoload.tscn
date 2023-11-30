@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/autoload_data.gd" type="Script" id=1]
 [ext_resource path="res://assets/music/Stardew Valley OST - The Library and Museum.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/music/Door Opening - Sound Effect.mp3" type="AudioStream" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -14,5 +15,8 @@ script = ExtResource( 1 )
 stream = ExtResource( 2 )
 volume_db = 3.983
 autoplay = true
+
+[node name="door2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
