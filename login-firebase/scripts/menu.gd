@@ -5,7 +5,7 @@ func _on_QuitButton_pressed():
 
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("")
+	AutoloadData.change_scene(AutoloadData.current_scene)
 
 
 func _on_SettingsButton_pressed():
