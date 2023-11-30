@@ -49,11 +49,3 @@ func _on_Test_test_over():
 	yield(get_tree().create_timer(2), "timeout")
 	$karakterblad.hide()
 
-
-func _on_badscore_finished():
-	$badscore.stop()
-	
-
-
-func _on_goodscore_finished():
-	$goodscore.stop()
