@@ -56,7 +56,7 @@ func _on_Test_test_over():
 	$karakterblad/Label2.text=AutoloadData.playername
 	$karakterblad/Label3.text=str(AutoloadData.current_time)+" seconds"
 	$karakterblad.show()
-	yield(get_tree().create_timer(2), "timeout")
+	yield(get_tree().create_timer(4), "timeout")
 	$karakterblad.hide()
 
 
